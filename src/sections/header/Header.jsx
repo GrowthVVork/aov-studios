@@ -38,7 +38,7 @@ export const Header = () => {
         </span>
         <ul className={`nav-list ${navActive ? "contained" : ""}`}>
           <li>
-            <a href="/" onClick={handleNavLinkClick}>
+            <a href="#hero" onClick={handleNavLinkClick}>
               Home
             </a>
           </li>
