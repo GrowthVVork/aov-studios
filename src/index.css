@@ -97,7 +97,8 @@ a {
   cursor: pointer;
   transition: all 0.4s ease-in-out 0.4s;
 }
-.more-link:hover{
+
+.more-link:hover {
   background-color: white;
   color: var(--accent-color);
   font-weight: 500;
@@ -114,8 +115,7 @@ main {
 }
 
 main > * {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
 }
 
 .overlay {
