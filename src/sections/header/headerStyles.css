@@ -1,12 +1,16 @@
 header {
-  position: sticky;
-  top: 0;
-  background-color: var(--primary-bg-color);
-  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.8rem 0;
+}
+
+.headerDiv {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: var(--primary-bg-color);
+  z-index: 100;
 }
 
 .logo {

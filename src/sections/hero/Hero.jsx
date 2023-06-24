@@ -4,7 +4,7 @@ import heroCropped from "../../assets/hero/hero-cropped.webp";
 
 export const Hero = () => {
   return (
-    <picture class="contained" id="hero">
+    <picture class="contained" id="hero" style={{marginTop: '6.5rem'}}>
       <source srcset={hero} media="(min-width: 850px)" />
       <img src={heroCropped} alt="" />
     </picture>

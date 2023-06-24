@@ -13,6 +13,7 @@ export const Header = () => {
   };
 
   return (
+    <div className="headerDiv">
     <header className={`contained ${navActive ? "active" : ""}`}>
       <h1 className="visually-hidden">
         An architecture and interior design firm
@@ -65,5 +66,6 @@ export const Header = () => {
         </ul>
       </nav>
     </header>
+    </div>
   );
 };
