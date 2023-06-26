@@ -2,14 +2,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+* {
   margin: 0;
 }
 
 html,
 body {
   height: 100%;
-  font-size: 100%;
-  scroll-behavior: smooth;
 }
 
 img,
@@ -40,6 +41,7 @@ body {
   background-color: var(--primary-bg-color);
   color: var(--text-color);
   letter-spacing: 0.0125rem;
+  /* for the overlay */
   position: relative;
 }
 
@@ -60,7 +62,6 @@ h2 {
   font-weight: 400;
   color: var(--accent-color);
   text-transform: uppercase;
-  margin-bottom: 1.8rem;
 }
 
 h3 {
@@ -73,6 +74,8 @@ h2 + p {
   font-weight: 200;
 }
 
+h2,
+h2 + p,
 .slider-wrap .navigation {
   margin-bottom: 1.8rem;
 }
@@ -85,20 +88,20 @@ a {
 .more-link {
   background-color: var(--accent-color);
   border-radius: 30px;
-  color: #2a2a2a;
+  color: var(--secondary-bg-color);
+  font-weight: 400;
   font-weight: bold;
   padding: 0.6rem 1.5rem;
   display: inline-flex;
   align-items: center;
   gap: 1.2rem;
   cursor: pointer;
-  transition: all 0.4s ease-in-out 0.4s;
 }
 
 .more-link:hover {
-  background-color: white;
-  color: var(--accent-color);
-  font-weight: 500;
+  background-color: var(--text-color);
+  color: var(--secondary-bg-color);
+  font-weight: bold;
 }
 
 .contained {
@@ -112,7 +115,8 @@ main {
 }
 
 main > * {
-  padding: 3rem 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .overlay {
@@ -124,6 +128,9 @@ main > * {
   display: grid;
   grid-template-columns: 1fr 4fr 4fr 1fr;
   z-index: -1;
+  max-width: 90rem;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .overlay .col:not(:last-child) {
@@ -138,4 +145,10 @@ main > * {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+@media (max-width: 40rem) {
+  .overlay {
+    display: none;
+  }
 }
