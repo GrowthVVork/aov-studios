@@ -28,10 +28,13 @@ export const About = () => {
   return (
     <div className="about contained" id="about">
       <section>
-        <h2>About</h2>
+        <h2>Innovative Design Firm: Architecture, Interior, Landscape & Construction Design</h2>
         <p>
-          An architecture and interior design firm <br />
-          that caters to both residential and commercial clients.
+          Welcome to our innovative design firm specializing in architecture, interior design,
+          landscape design, and construction design. From residential to commercial projects, 
+          our skilled team creates exceptional spaces that inspire. Collaborating closely with 
+          clients, we bring dreams to life by combining aesthetics with functionality. Discover 
+          our passion for design and let us transform your vision into reality.
         </p>
       </section>
 
