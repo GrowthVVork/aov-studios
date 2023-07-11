@@ -9,8 +9,9 @@ export const Footer = () => {
           <h2>Services</h2>
           <ul>
             <li>Architecture</li>
-            <li>Interior design</li>
-            <li>Renovation</li>
+            <li>Interior Design</li>
+            <li>Landscape Design</li>
+            <li>Construction Design</li>
           </ul>
         </section>
 
@@ -19,16 +20,18 @@ export const Footer = () => {
           <address>
             AOV Studios
             <br />
-            Near Airport, Indore
+            Narayan Bagh,
             <br />
-            MP, India
+            Indore (M.P.)
+            <br />
+            India
           </address>
         </section>
 
         <section class="footer-contact">
-          <h2>Contact</h2>
-          <span>Onal Kothari Bhagat</span>
-          <span>enter@email.com</span>
+          <h2>Contact Us </h2>
+          <span>+91-7582898292</span>
+          <span>studiosaov@gmail.com</span>
         </section>
       </div>
     </footer>

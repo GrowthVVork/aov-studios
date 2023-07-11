@@ -88,7 +88,7 @@ export const Services = () => {
       <div class="service-item">
         <div class="service-item-content">
           <section>
-            <h3>Renovation</h3>
+            <h3>Construction Design</h3>
             <p>
             Above all, we are committed to our clients and prioritize their satisfaction. 
             Our entire firm is dedicated to going the extra mile when needed, ensuring 
