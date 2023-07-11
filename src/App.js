@@ -16,7 +16,8 @@ const App = () => {
         <About />
         <Services />
         <Portfolio />
-        <Blog />
+        {/* Blog to be replaced by projects which will be another page */}
+        {/* <Blog /> */}
       </main>
       <Footer />
     </>
