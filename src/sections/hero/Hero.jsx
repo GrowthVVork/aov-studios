@@ -1,12 +1,10 @@
 import React from "react";
-import hero from "../../assets/hero/hero.webp";
-import heroCropped from "../../assets/hero/hero-cropped.webp";
+import hero from "../../assets/hero/hero.jpg";
 
 export const Hero = () => {
   return (
     <picture class="contained" id="hero">
-      <source srcset={hero} media="(min-width: 850px)" />
-      <img src={heroCropped} alt="" />
+      <img srcset={hero} alt="" />
     </picture>
   );
 };
