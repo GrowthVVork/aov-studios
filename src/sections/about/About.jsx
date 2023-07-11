@@ -1,13 +1,14 @@
 import React, { useRef } from "react";
 import sliderPrev from "../../assets/icons/slider-prev.png";
 import sliderNext from "../../assets/icons/slider-next.png";
-import slider1 from "../../assets/slider/1.webp";
-import slider2 from "../../assets/slider/2.webp";
-import slider3 from "../../assets/slider/3.webp";
-import slider4 from "../../assets/slider/4.webp";
-import slider5 from "../../assets/slider/5.webp";
-import slider6 from "../../assets/slider/6.webp";
-import slider7 from "../../assets/slider/7.webp";
+import slider1 from "../../assets/slider/1.jpg";
+import slider2 from "../../assets/slider/2.jpg";
+import slider3 from "../../assets/slider/3.jpg";
+import slider4 from "../../assets/slider/4.jpg";
+import slider5 from "../../assets/slider/5.jpg";
+import slider6 from "../../assets/slider/6.jpg";
+import slider7 from "../../assets/slider/7.jpg";
+import slider8 from "../../assets/slider/8.jpg";
 import "./aboutStyles.css";
 
 export const About = () => {
@@ -56,6 +57,7 @@ export const About = () => {
           <img src={slider5} alt="" />
           <img src={slider6} alt="" />
           <img src={slider7} alt="" />
+          <img src={slider8} alt="" />
         </div>
       </div>
     </div>
