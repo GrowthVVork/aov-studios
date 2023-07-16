@@ -20,6 +20,12 @@ const App = () => {
         {/* <Blog /> */}
       </main>
       <Footer />
+      <div className="overlay">
+        <div className="col"></div>
+        <div className="col"></div>
+        <div className="col"></div>
+        <div className="col"></div>
+      </div>
     </>
   );
 };
