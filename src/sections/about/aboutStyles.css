@@ -1,0 +1,52 @@
+.about > section,
+.blog > section {
+  padding-left: 15%;
+}
+
+.slider-wrap .navigation {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+
+.navigation img {
+  cursor: pointer;
+}
+
+.slider {
+  display: flex;
+  column-gap: 20px;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.slider img {
+  width: 33%;
+  min-width: 33%;
+}
+
+@media (max-width: 40rem) {
+  .about section br {
+    display: none;
+  }
+}
+
+@media (max-width: 53rem) {
+  .about > section,
+  .blog > section {
+    padding-left: 0;
+  }
+
+  .slider img {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 71rem) {
+  .slider img {
+    width: 50%;
+    min-width: 50%;
+  }
+}
