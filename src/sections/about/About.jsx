@@ -55,13 +55,13 @@ export const About = () => {
         </div>
 
         <div className="slider" ref={sliderRef}>
-          <img src={slider1} alt="" />
-          <img src={slider2} alt="" />
           <img src={slider3} alt="" />
           <img src={slider4} alt="" />
-          <img src={slider5} alt="" />
           <img src={slider6} alt="" />
           <img src={slider7} alt="" />
+          <img src={slider1} alt="" />
+          <img src={slider2} alt="" />
+          <img src={slider5} alt="" />
           <img src={slider8} alt="" />
         </div>
       </div>
