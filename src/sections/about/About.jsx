@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import sliderPrev from "../../assets/icons/slider-prev.png";
 import sliderNext from "../../assets/icons/slider-next.png";
-import slider1 from "../../assets/slider/1.jpg";
-import slider2 from "../../assets/slider/2.jpg";
-import slider3 from "../../assets/slider/3.jpg";
-import slider4 from "../../assets/slider/4.jpg";
-import slider5 from "../../assets/slider/5.jpg";
-import slider6 from "../../assets/slider/6.jpg";
-import slider7 from "../../assets/slider/7.jpg";
-import slider8 from "../../assets/slider/8.jpg";
+import slider1 from "../../assets/about/1.jpg";
+import slider2 from "../../assets/about/2.jpg";
+import slider3 from "../../assets/about/3.jpg";
+import slider4 from "../../assets/about/4.jpg";
+import slider5 from "../../assets/about/5.jpg";
+import slider6 from "../../assets/about/6.jpg";
+import slider7 from "../../assets/about/7.jpg";
+import slider8 from "../../assets/about/8.jpg";
 import "./aboutStyles.css";
 
 export const About = () => {
