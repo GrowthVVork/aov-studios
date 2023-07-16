@@ -4,7 +4,7 @@ import { Hero } from "./sections/hero/Hero";
 import { About } from "./sections/about/About";
 import { Services } from "./sections/services/Services";
 import { Portfolio } from "./sections/portfolio/Portfolio";
-import { Blog } from "./sections/blog/Blog";
+// import { Blog } from "./sections/blog/Blog";
 import { Footer } from "./sections/footer/Footer";
 
 const App = () => {
