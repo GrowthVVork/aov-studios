@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/aov-studios/static/css/main.a81a0d33.css",
+    "main.js": "/aov-studios/static/js/main.e0e02cc7.js",
+    "static/media/5.webp": "/aov-studios/static/media/5.d1d2987be0286ee2fbfd.webp",
+    "static/media/4.webp": "/aov-studios/static/media/4.888de85908d62cc8ca49.webp",
+    "static/media/6.webp": "/aov-studios/static/media/6.56d8f365366a0d373eed.webp",
+    "static/media/interior-design-service-large.webp": "/aov-studios/static/media/interior-design-service-large.a6988752b95518f26131.webp",
+    "static/media/renovation-large.webp": "/aov-studios/static/media/renovation-large.9b984f5508ece84a82af.webp",
+    "static/media/3.webp": "/aov-studios/static/media/3.888de85908d62cc8ca49.webp",
+    "static/media/7.webp": "/aov-studios/static/media/7.56d8f365366a0d373eed.webp",
+    "static/media/1.webp": "/aov-studios/static/media/1.3598371daab13d6f034f.webp",
+    "static/media/2.webp": "/aov-studios/static/media/2.d1d2987be0286ee2fbfd.webp",
+    "static/media/architecture-service-large.webp": "/aov-studios/static/media/architecture-service-large.0317ce1dd2677d2e81ce.webp",
+    "static/media/interior-design-service-medium.webp": "/aov-studios/static/media/interior-design-service-medium.df2bd66ab343be386357.webp",
+    "static/media/renovation-medium.webp": "/aov-studios/static/media/renovation-medium.4010939cf7b56d73cffe.webp",
+    "static/media/hero.webp": "/aov-studios/static/media/hero.3f0f0a6c9166bc24e5fb.webp",
+    "static/media/architecture-service-medium.webp": "/aov-studios/static/media/architecture-service-medium.1d0a0e51b150f6a295b5.webp",
+    "static/media/interior-design-service-small.webp": "/aov-studios/static/media/interior-design-service-small.22ace3be597cfbe6264c.webp",
+    "static/media/hero-cropped.webp": "/aov-studios/static/media/hero-cropped.2fe6340d18c592d35ce1.webp",
+    "static/media/renovation-small.webp": "/aov-studios/static/media/renovation-small.1c4af22c831a90055f05.webp",
+    "static/media/architecture-service-small.webp": "/aov-studios/static/media/architecture-service-small.3f17b5be6105c6b8af47.webp",
+    "index.html": "/aov-studios/index.html",
+    "main.a81a0d33.css.map": "/aov-studios/static/css/main.a81a0d33.css.map",
+    "main.e0e02cc7.js.map": "/aov-studios/static/js/main.e0e02cc7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a81a0d33.css",
+    "static/js/main.e0e02cc7.js"
+  ]
+}
