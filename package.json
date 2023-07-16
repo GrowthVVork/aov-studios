@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "This project is the official website created for AOV Studios firm.",
   "repository": "https://github.com/GrowthVVork/aov-studios",
-  "author": "aov-studios <siddhiusgupta@gmail.com>",
+  "authors": [
+    {"name": "Siddhi Gupta", "email": "siddhiusgupta@gmail.com"},
+    {"name": "Tejas", "email": "tejaskothari03@gmail.com"}
+  ],
   "homepage": "https://growthvvork.github.io/aov-studios/",
   "private": true,
   "dependencies": {

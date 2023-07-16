@@ -1,18 +1,18 @@
 import React from "react";
-import one from "../../assets/gallery/1.webp";
-import two from "../../assets/gallery/2.webp";
-import three from "../../assets/gallery/3.webp";
-import four from "../../assets/gallery/4.webp";
-import five from "../../assets/gallery/5.webp";
-import six from "../../assets/gallery/6.webp";
-import seven from "../../assets/gallery/7.webp";
+import one from "../../assets/portfolio/1.jpg";
+import two from "../../assets/portfolio/2.jpg";
+import three from "../../assets/portfolio/3.jpg";
+import four from "../../assets/portfolio/4.jpg";
+import five from "../../assets/portfolio/5.jpg";
+import six from "../../assets/portfolio/6.jpg";
+import seven from "../../assets/portfolio/7.jpg";
 import "./portfolioStyles.css";
 
 export const Portfolio = () => {
   return (
-    <section class="portfolio contained" id="portfolio">
+    <section className="portfolio contained" id="portfolio">
       <h2>Portfolio</h2>
-      <div class="gallery">
+      <div className="gallery">
         <img src={one} alt="" />
         <img src={two} alt="" />
         <img src={three} alt="" />
