@@ -10,10 +10,10 @@ import "./servicesStyles.css";
 
 export const Services = () => {
   return (
-    <section class="services contained" id="services">
+    <section className="services contained" id="services">
       <h2>Services</h2>
-      <div class="service-item">
-        <div class="service-item-content">
+      <div className="service-item">
+        <div className="service-item-content">
           <section>
             <h3>Architecture</h3>
             <p>
@@ -24,7 +24,7 @@ export const Services = () => {
             residential facilities, as well as multiple building site planning, we have successfully completed 
             projects involving both new constructions and renovations of existing buildings.
             </p>
-            <a class="more-link">
+            <a className="more-link">
               <span>Learn More</span>
               <img src={rightArrow} alt="More about us!" />
             </a>
@@ -37,8 +37,8 @@ export const Services = () => {
         </picture>
       </div>
 
-      <div class="service-item">
-        <div class="service-item-content">
+      <div className="service-item">
+        <div className="service-item-content">
           <section>
             <h3>Interior Design</h3>
 
@@ -50,7 +50,7 @@ export const Services = () => {
             maintaining a focus on practicality and utility. We recognize the evolving nature of the 
             profession and strive to address key aspects of adapting to change.
             </p>
-            <a class="more-link">
+            <a className="more-link">
               <span>Learn More</span>
               <img src={rightArrow} alt="More about us!" />
             </a>
@@ -63,8 +63,8 @@ export const Services = () => {
         </picture>
       </div>
 
-      <div class="service-item">
-        <div class="service-item-content">
+      <div className="service-item">
+        <div className="service-item-content">
           <section>
             <h3>Construction Design</h3>
             <p>
@@ -75,7 +75,7 @@ export const Services = () => {
             for the agencies and organizations responsible for the projects.
             </p>
 
-            <a class="more-link">
+            <a className="more-link">
               <span>Learn More</span>
               <img src={rightArrow} alt="More about us!" />
             </a>

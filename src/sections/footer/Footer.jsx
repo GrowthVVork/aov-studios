@@ -4,8 +4,8 @@ import "./footerStyles.css";
 export const Footer = () => {
   return (
     <footer id="footer">
-      <div class="contained">
-        <section class="footer-services">
+      <div className="contained">
+        <section className="footer-services">
           <h2>Services</h2>
           <ul>
             <li>Architecture</li>
@@ -15,7 +15,7 @@ export const Footer = () => {
           </ul>
         </section>
 
-        <section class="footer-address">
+        <section className="footer-address">
           <h2>Address</h2>
           <address>
             AOV Studios
@@ -28,7 +28,7 @@ export const Footer = () => {
           </address>
         </section>
 
-        <section class="footer-contact">
+        <section className="footer-contact">
           <h2>Contact Us </h2>
           <span>+91-7582898292</span>
           <span>studiosaov@gmail.com</span>

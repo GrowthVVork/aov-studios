@@ -10,9 +10,9 @@ import "./portfolioStyles.css";
 
 export const Portfolio = () => {
   return (
-    <section class="portfolio contained" id="portfolio">
+    <section className="portfolio contained" id="portfolio">
       <h2>Portfolio</h2>
-      <div class="gallery">
+      <div className="gallery">
         <img src={one} alt="" />
         <img src={two} alt="" />
         <img src={three} alt="" />
