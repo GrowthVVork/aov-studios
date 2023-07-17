@@ -24,7 +24,7 @@ export const Services = () => {
             residential facilities, as well as multiple building site planning, we have successfully completed 
             projects involving both new constructions and renovations of existing buildings.
             </p>
-            <a className="more-link">
+            <a className="more-link" href="#services">
               <span>Learn More</span>
               <img src={rightArrow} alt="More about us!" />
             </a>
@@ -50,7 +50,7 @@ export const Services = () => {
             maintaining a focus on practicality and utility. We recognize the evolving nature of the 
             profession and strive to address key aspects of adapting to change.
             </p>
-            <a className="more-link">
+            <a className="more-link" href="#services">
               <span>Learn More</span>
               <img src={rightArrow} alt="More about us!" />
             </a>
@@ -75,7 +75,7 @@ export const Services = () => {
             for the agencies and organizations responsible for the projects.
             </p>
 
-            <a className="more-link">
+            <a className="more-link" href="#services">
               <span>Learn More</span>
               <img src={rightArrow} alt="More about us!" />
             </a>
