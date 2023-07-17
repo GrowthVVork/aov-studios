@@ -1,6 +1,6 @@
-.about > section,
-.blog > section {
+.about > section {
   padding-left: 15%;
+  padding-top: 3rem;
 }
 
 .slider-wrap .navigation {
@@ -22,9 +22,9 @@
 }
 
 .slider img {
-  width: 30rem;
-  height: 30rem;
-  min-width: 30rem;
+  width: 25rem;
+  height: 25rem;
+  min-width: 25rem;
 }
 
 @media (max-width: 71rem) {

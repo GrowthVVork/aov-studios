@@ -18,7 +18,7 @@ export const Header = () => {
         <h1 className="visually-hidden">
           An architecture and interior design firm
         </h1>
-        <a href="/" className="logo">
+        <a href="/aov-studios" className="logo">
           AOV Studios
         </a>
 

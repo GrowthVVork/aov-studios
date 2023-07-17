@@ -33,16 +33,14 @@ export const About = () => {
           Innovative Design Firm <br /> Architecture, Interior, Landscape &
           Construction Design
         </h2>
-        <p>
-          <div style={{ width: "80%" }}>
-            Welcome to our innovative design firm specializing in architecture,
-            interior design, landscape design, and construction design. From
-            residential to commercial projects, our skilled team creates
-            exceptional spaces that inspire. Collaborating closely with clients,
-            we bring dreams to life by combining aesthetics with functionality.
-            Discover our passion for design and let us transform your vision
-            into reality.
-          </div>
+        <p style={{ width: "80%" }}>
+          Welcome to our innovative design firm specializing in architecture,
+          interior design, landscape design, and construction design. <br />
+          From residential to commercial projects, our skilled team creates
+          exceptional spaces that inspire. Collaborating closely with clients,
+          we bring dreams to life by combining aesthetics with functionality.
+          <br /> Discover our passion for design and let us transform your
+          vision into reality.
         </p>
       </section>
 
