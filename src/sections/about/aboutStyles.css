@@ -1,6 +1,6 @@
-.about > section,
-.blog > section {
+.about > section {
   padding-left: 15%;
+  padding-top: 3rem;
 }
 
 .slider-wrap .navigation {
