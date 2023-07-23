@@ -2,7 +2,6 @@ import { styled } from "@mui/material";
 
 export const Nav = styled("nav")(() => ({
   alignItems: "center",
-  backgroundColor: "white",
   boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.09)",
   display: "flex",
   fontSize: "1.7rem",
@@ -17,6 +16,7 @@ export const Nav = styled("nav")(() => ({
   "@media (max-width: 400px)": {
     padding: "25px 30px 25px 30px",
   },
+  background: "rgb(249, 249, 249)",
 }));
 
 export const NavLogo = styled("h3")(() => ({
