@@ -1,4 +1,5 @@
 import * as React from "react";
+import { IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import slider1 from "../../assets/about/1.jpg";
 import slider2 from "../../assets/about/2.jpg";
@@ -10,76 +11,92 @@ import slider7 from "../../assets/about/7.jpg";
 import slider8 from "../../assets/about/8.jpg";
 import {
   AboutUsContainer,
-  StyledTypography,
+  ContentTextH4,
+  ContentTextP,
   ImageSlider,
-  NavigationWrapper,
   Images,
   ImagesWrapper,
+  AboutUsContent,
 } from "./AboutUs.styles";
 
 export const AboutUs = () => {
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-  };
-
-  const images = [
-    slider3,
-    slider4,
-    slider6,
-    slider7,
-    slider1,
-    slider2,
-    slider5,
-    slider8,
-  ];
-
-  const numberOfImages = 4;
-  const visibleImages = images.slice(
-    currentIndex,
-    currentIndex + numberOfImages
+  const images = React.useMemo(
+    () => [
+      slider3,
+      slider4,
+      slider6,
+      slider7,
+      slider1,
+      slider2,
+      slider5,
+      slider8,
+    ],
+    []
   );
+
+  const sliderRef = React.useRef(null);
+
+  const handleNextClick = () => {
+    const slider = sliderRef.current;
+    const scrollAmount = slider.offsetWidth;
+    slider.scrollLeft += scrollAmount;
+  };
+
+  const handlePrevClick = () => {
+    const slider = sliderRef.current;
+    const scrollAmount = slider.offsetWidth;
+    slider.scrollLeft -= scrollAmount;
+  };
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      const slider = sliderRef.current;
+      const containerWidth = slider.offsetWidth;
+      const imageWidth = images.length > 0 ? slider.children[0].offsetWidth : 0;
+      const visibleImages = Math.floor(containerWidth / imageWidth);
+      const maxScroll = (images.length - visibleImages) * imageWidth;
+      if (slider.scrollLeft > maxScroll) {
+        slider.scrollLeft = maxScroll;
+      }
+    };
+
+    handleResize(); // Call once on mount to set initial state
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [images]);
 
   return (
     <AboutUsContainer id="about">
-      <StyledTypography variant="h3">
-        Innovative Design Firm <br /> Architecture, Interior, Landscape &
-        Construction Design
-      </StyledTypography>
-      <StyledTypography variant="h4" paddingTop={"2rem"}>
-        Welcome to our innovative design firm specializing in architecture,
-        interior design, landscape design, and construction design. <br /> From
-        residential to commercial projects, our skilled team creates exceptional
-        spaces that inspire. <br /> Collaborating closely with clients, we bring
-        dreams to life by combining aesthetics with functionality. <br />
-        Discover our passion for design and let us transform your vision into
-        reality.
-      </StyledTypography>
+      <AboutUsContent>
+        <ContentTextH4 textTransform={"uppercase"} variant="h4">
+          Innovative Design Firm <br /> Architecture, Interior, Landscape &
+          Construction Design
+        </ContentTextH4>
+        <ContentTextP>
+          Welcome to our innovative design firm specializing in architecture,
+          interior design, landscape design, and construction design. From
+          residential to commercial projects, our skilled team creates
+          exceptional spaces that inspire. Collaborating closely with clients,
+          we bring dreams to life by combining aesthetics with functionality.
+          Discover our passion for design and let us transform your vision into
+          reality.
+        </ContentTextP>
+      </AboutUsContent>
       <ImageSlider>
-        <NavigationWrapper>
-          <ChevronLeft
-            style={{ cursor: "pointer" }}
-            size={30}
-            onClick={prevImage}
-          />
-          <ChevronRight
-            style={{ cursor: "pointer" }}
-            size={30}
-            onClick={nextImage}
-          />
-        </NavigationWrapper>
-        <ImagesWrapper numberOfImages={numberOfImages}>
-          {visibleImages.map((image, index) => (
+        <IconButton size="large" onClick={handlePrevClick}>
+          <ChevronLeft style={{ cursor: "pointer" }} />
+        </IconButton>
+        <ImagesWrapper ref={sliderRef}>
+          {images.map((image, index) => (
             <Images key={index} src={image} alt="" />
           ))}
         </ImagesWrapper>
+        <IconButton size="large" onClick={handleNextClick}>
+          <ChevronRight style={{ cursor: "pointer" }} />
+        </IconButton>
       </ImageSlider>
     </AboutUsContainer>
   );

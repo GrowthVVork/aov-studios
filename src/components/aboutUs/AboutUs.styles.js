@@ -1,47 +1,55 @@
-import { Typography, styled } from "@mui/material";
+import { styled } from "@mui/material";
 
 export const AboutUsContainer = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  paddingTop: "6rem",
+  paddingTop: "5rem",
   justifyContent: "center",
 }));
 
-export const StyledTypography = styled(Typography)(() => ({
-  display: "flex",
+export const AboutUsContent = styled("div")(() => ({
   width: "70%",
-  flexDirection: "column",
-  alignItems: "flex-start",
-  letterSpacing: "0.2rem",
+  padding: "0 0 0 5%",
+}));
+
+export const ContentTextH4 = styled("h4")(() => ({
+  fontSize: "2.2rem",
+  fontFamily: '"Poppins", sans-serif',
+  fontWeight: 400,
+  lineHeight: 1.5,
+  marginBottom: "2.6rem",
+  color: "#2d2e32",
+  textTransform: 'uppercase',
+}));
+
+export const ContentTextP = styled("p")(() => ({
+  fontSize: "2.2rem",
+  fontFamily:'"Poppins", sans-serif',
+  color: "#767676",
+  fontWeight: 200,
+  lineHeight: 1.5,
+  letterSpacing: '0.2rem',
 }));
 
 export const ImageSlider = styled("div")(() => ({
-  paddingTop: "6rem",
-  display: "flex",
-  flexDirection: "column",
-  gap: "1.5rem",
-  justifyContent: "flex-end",
-  width: "70%",
-}));
-
-export const NavigationWrapper = styled("div")(() => ({
+  alignItems: "center",
   display: "flex",
   gap: "1.5rem",
   justifyContent: "flex-end",
+  width: "100%",
+  padding: '6rem 10px 0 10px'
 }));
 
 export const ImagesWrapper = styled("div")(() => ({
   display: "flex",
-  gap: "20px", // Adjust the gap between images as needed
-  overflowX: "hidden", // Change to "hidden" to remove horizontal scroll
-  width: "100%", // Ensure the ImagesWrapper occupies the available width
-  maxWidth: "100%", // Ensure the ImagesWrapper doesn't overflow its container
+  columnGap: "20px",
+  overflowX: "hidden",
+  width: "100%",
 }));
 
-export const Images = styled("img")(({ numberOfImages }) => ({
-  flex: `0 0 calc((100% - ${numberOfImages - 1} * 20px) / ${numberOfImages})`,
+export const Images = styled("img")(() => ({
   height: "30rem",
   width: "30rem",
-  objectFit: "cover",
+  maxWidth: "30rem",
 }));
