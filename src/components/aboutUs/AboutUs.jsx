@@ -60,7 +60,7 @@ export const AboutUs = () => {
       }
     };
 
-    handleResize(); // Call once on mount to set initial state
+    handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => {

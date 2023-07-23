@@ -6,6 +6,7 @@ export const AboutUsContainer = styled("div")(() => ({
   alignItems: "center",
   paddingTop: "5rem",
   justifyContent: "center",
+  background: "rgb(249, 249, 249)",
 }));
 
 export const AboutUsContent = styled("div")(() => ({
