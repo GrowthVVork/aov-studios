@@ -1,6 +1,6 @@
 import React from "react";
 // import { Header, Hero, About, Services, Portfolio, Footer } from "./sections";
-import { AboutUs, Header, HeroImage } from "./components";
+import { AboutUs, Footer, Header, HeroImage } from "./components";
 
 const App = () => {
   // return (
@@ -27,7 +27,8 @@ const App = () => {
     <>
       <Header />
       <HeroImage />
-      <AboutUs/>
+      <AboutUs />
+      <Footer />
     </>
   );
 };
