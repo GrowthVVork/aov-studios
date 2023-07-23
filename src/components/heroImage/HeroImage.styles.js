@@ -1,6 +1,6 @@
 import { styled } from "@mui/material";
 
-export const HeroImageWrapper = styled("div")(() => ({
+export const HeroImageWrapper = styled("picture")(() => ({
   display: "flex",
   justifyContent: "center",
   paddingTop: '8rem',
@@ -9,6 +9,5 @@ export const HeroImageWrapper = styled("div")(() => ({
 }));
 
 export const Image = styled("img")(() => ({
-  height: "60%",
-  width: "70%",
+  width: "90%",
 }));
