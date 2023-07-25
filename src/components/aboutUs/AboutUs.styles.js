@@ -21,16 +21,16 @@ export const ContentTextH4 = styled("h4")(() => ({
   lineHeight: 1.5,
   marginBottom: "2.6rem",
   color: "#2d2e32",
-  textTransform: 'uppercase',
+  textTransform: "uppercase",
 }));
 
 export const ContentTextP = styled("p")(() => ({
   fontSize: "2.2rem",
-  fontFamily:'"Poppins", sans-serif',
+  fontFamily: '"Poppins", sans-serif',
   color: "#767676",
   fontWeight: 200,
   lineHeight: 1.5,
-  letterSpacing: '0.2rem',
+  letterSpacing: "0.2rem",
 }));
 
 export const ImageSlider = styled("div")(() => ({
@@ -39,7 +39,11 @@ export const ImageSlider = styled("div")(() => ({
   gap: "1.5rem",
   justifyContent: "flex-end",
   width: "100%",
-  padding: '6rem 10px 0 10px'
+  padding: "6rem 10px 0 10px",
+  "@media (max-width: 3rem)": {
+    width: "50%",
+    minWidth: "50%",
+  },
 }));
 
 export const ImagesWrapper = styled("div")(() => ({
@@ -49,8 +53,12 @@ export const ImagesWrapper = styled("div")(() => ({
   width: "100%",
 }));
 
+export const ImageContainer = styled("div")(() => ({
+  width: "100%",
+}));
+
 export const Images = styled("img")(() => ({
   height: "30rem",
-  width: "30rem",
-  maxWidth: "30rem",
+  width: "40rem",
+  maxWidth: "40rem",
 }));

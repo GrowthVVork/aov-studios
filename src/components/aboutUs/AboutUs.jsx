@@ -17,6 +17,7 @@ import {
   Images,
   ImagesWrapper,
   AboutUsContent,
+  ImageContainer,
 } from "./AboutUs.styles";
 
 export const AboutUs = () => {
@@ -91,7 +92,9 @@ export const AboutUs = () => {
         </IconButton>
         <ImagesWrapper ref={sliderRef}>
           {images.map((image, index) => (
-            <Images key={index} src={image} alt="" />
+            <ImageContainer>
+              <Images key={index} src={image} alt="" />
+            </ImageContainer>
           ))}
         </ImagesWrapper>
         <IconButton size="large" onClick={handleNextClick}>
