@@ -11,6 +11,7 @@ import {
   MobileNavUla,
   MobileMenu,
 } from "./Header.styles";
+import { Menu, X } from "react-feather";
 
 export const Header = () => {
   const [hamburger, setHamburger] = React.useState(false);
@@ -57,7 +58,9 @@ export const Header = () => {
             </li>
           ))}
           <li onClick={() => hamburgerMenu()}>
-            <MobileMenu className="fa-solid fa-bars-staggered"></MobileMenu>
+            <MobileMenu>
+              <Menu />
+            </MobileMenu>
           </li>
         </NavUl>
       </Nav>
@@ -67,7 +70,9 @@ export const Header = () => {
       {hamburger ? (
         <MobileNavOpen>
           <MobileNavSpan onClick={() => hamburgerMenu()}>
-            <i className="fa-solid fa-xmark"></i>
+            <i>
+              <X />
+            </i>
           </MobileNavSpan>
 
           <MobileNavUl>
@@ -81,7 +86,9 @@ export const Header = () => {
       ) : (
         <MobileNavClose>
           <MobileNavSpan onClick={() => hamburgerMenu()}>
-            <i className="fa-solid fa-xmark"></i>
+            <i>
+              <X />
+            </i>
           </MobileNavSpan>
 
           <MobileNavUl>
