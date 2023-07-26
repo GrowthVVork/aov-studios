@@ -1,49 +1,47 @@
 import { styled } from "@mui/material";
 
 export const AboutUsContainer = styled("div")(() => ({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  paddingTop: "5rem",
-  justifyContent: "center",
-  background: "rgb(249, 249, 249)",
+  margin: "0 auto",
+  padding: "5rem 0",
+  width: "90%",
+  "@media (max-width: 71rem)": {
+    padding: "5rem 0",
+  },
+  "@media (max-width: 53rem)": {
+    padding: "5rem 0",
+  },
 }));
 
 export const AboutUsContent = styled("div")(() => ({
-  width: "70%",
-  padding: "0 0 0 5%",
+  paddingBottom: "6rem",
+  paddingLeft: "15%",
+  "@media (max-width: 53rem)": {
+    paddingLeft: 0,
+  },
 }));
 
 export const ContentTextH4 = styled("h4")(() => ({
-  fontSize: "2.2rem",
-  fontFamily: '"Poppins", sans-serif',
-  fontWeight: 400,
-  lineHeight: 1.5,
-  marginBottom: "2.6rem",
   color: "#2d2e32",
+  font: '300 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "2.2rem",
+  fontWeight: 400,
+  marginBottom: "3rem",
   textTransform: "uppercase",
 }));
 
 export const ContentTextP = styled("p")(() => ({
-  fontSize: "2.2rem",
-  fontFamily: '"Poppins", sans-serif',
   color: "#767676",
+  font: '300 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "2.2rem",
   fontWeight: 200,
-  lineHeight: 1.5,
-  letterSpacing: "0.2rem",
+  letterSpacing: "0.02rem",
+  marginRight: "1rem",
 }));
 
 export const ImageSlider = styled("div")(() => ({
   alignItems: "center",
   display: "flex",
-  gap: "1.5rem",
-  justifyContent: "flex-end",
-  width: "100%",
-  padding: "6rem 10px 0 10px",
-  "@media (max-width: 3rem)": {
-    width: "50%",
-    minWidth: "50%",
-  },
+  overflowX: "auto",
 }));
 
 export const ImagesWrapper = styled("div")(() => ({
@@ -53,12 +51,15 @@ export const ImagesWrapper = styled("div")(() => ({
   width: "100%",
 }));
 
-export const ImageContainer = styled("div")(() => ({
-  width: "100%",
-}));
-
 export const Images = styled("img")(() => ({
-  height: "30rem",
-  width: "40rem",
-  maxWidth: "40rem",
+  minWidth: "33%",
+  width: "33%",
+  "@media (max-width: 71rem)": {
+    minWidth: "50%",
+    width: "50%",
+  },
+  "@media (max-width: 53rem)": {
+    minWidth: "100%",
+    width: "100%",
+  },
 }));
