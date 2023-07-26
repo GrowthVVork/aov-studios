@@ -36,6 +36,9 @@ export const AboutUs = () => {
   );
 
   const sliderRef = React.useRef(null);
+  const [isLeftButtonDisabled, setIsLeftButtonDisabled] = React.useState(true);
+  const [isRightButtonDisabled, setIsRightButtonDisabled] =
+    React.useState(false);
 
   const handleNextClick = () => {
     const slider = sliderRef.current;
@@ -50,24 +53,25 @@ export const AboutUs = () => {
   };
 
   React.useEffect(() => {
-    const handleResize = () => {
+    const handleScroll = () => {
       const slider = sliderRef.current;
-      const containerWidth = slider.offsetWidth;
-      const imageWidth = images.length > 0 ? slider.children[0].offsetWidth : 0;
-      const visibleImages = Math.floor(containerWidth / imageWidth);
-      const maxScroll = (images.length - visibleImages) * imageWidth;
-      if (slider.scrollLeft > maxScroll) {
-        slider.scrollLeft = maxScroll;
-      }
+      const isAtStart = slider.scrollLeft === 0;
+      const isAtEnd =
+        slider.scrollLeft + slider.clientWidth >= slider.scrollWidth;
+
+      setIsLeftButtonDisabled(isAtStart);
+      setIsRightButtonDisabled(isAtEnd);
     };
 
-    handleResize();
+    handleScroll();
 
-    window.addEventListener("resize", handleResize);
+    const slider = sliderRef.current;
+    slider.addEventListener("scroll", handleScroll);
+
     return () => {
-      window.removeEventListener("resize", handleResize);
+      slider.removeEventListener("scroll", handleScroll);
     };
-  }, [images]);
+  }, []);
 
   return (
     <AboutUsContainer id="about">
@@ -87,17 +91,25 @@ export const AboutUs = () => {
         </ContentTextP>
       </AboutUsContent>
       <ImageSlider>
-        <IconButton size="large" onClick={handlePrevClick}>
+        <IconButton
+          size="large"
+          onClick={handlePrevClick}
+          disabled={isLeftButtonDisabled}
+        >
           <ChevronLeft style={{ cursor: "pointer" }} />
         </IconButton>
         <ImagesWrapper ref={sliderRef}>
           {images.map((image, index) => (
-            <ImageContainer>
-              <Images key={index} src={image} alt="" />
+            <ImageContainer key={index}>
+              <Images src={image} alt="" />
             </ImageContainer>
           ))}
         </ImagesWrapper>
-        <IconButton size="large" onClick={handleNextClick}>
+        <IconButton
+          size="large"
+          onClick={handleNextClick}
+          disabled={isRightButtonDisabled}
+        >
           <ChevronRight style={{ cursor: "pointer" }} />
         </IconButton>
       </ImageSlider>
