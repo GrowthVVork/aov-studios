@@ -1,12 +1,13 @@
-import React from "react";
-// import hero from "./heroImage.png";
-import { Image, HeroImageWrapper } from "./HeroImage.styles";
-import hero from "../../assets/hero/hero.png";
+import * as React from "react";
+import hero from "./assets/hero.jpg";
+import heroCropped from "./assets/hero-cropped.jpg";
+import { HeroImageWrapper, Image } from "./HeroImage.styles";
 
 export const HeroImage = () => {
   return (
     <HeroImageWrapper>
-      <Image srcSet={hero} alt="heroImage" />
+      <source srcset={hero} media="(min-width: 850px)" />
+      <Image src={heroCropped} alt="" />
     </HeroImageWrapper>
   );
 };
