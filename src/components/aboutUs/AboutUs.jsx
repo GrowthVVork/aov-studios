@@ -1,14 +1,13 @@
 import * as React from "react";
 import { IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "react-feather";
-import slider1 from "../../assets/about/1.jpg";
-import slider2 from "../../assets/about/2.jpg";
-import slider3 from "../../assets/about/3.jpg";
-import slider4 from "../../assets/about/4.jpg";
-import slider5 from "../../assets/about/5.jpg";
-import slider6 from "../../assets/about/6.jpg";
-import slider7 from "../../assets/about/7.jpg";
-import slider8 from "../../assets/about/8.jpg";
+import slider1 from "./assets/About-1.jpg";
+import slider2 from "./assets/About-2.jpg";
+import slider3 from "./assets/About-3.jpg";
+import slider4 from "./assets/About-4.jpg";
+import slider5 from "./assets/About-5.jpg";
+import slider6 from "./assets/About-6.jpg";
+import slider7 from "./assets/About-7.jpg";
 import {
   AboutUsContainer,
   ContentTextH4,
@@ -17,21 +16,11 @@ import {
   Images,
   ImagesWrapper,
   AboutUsContent,
-  ImageContainer,
 } from "./AboutUs.styles";
 
 export const AboutUs = () => {
   const images = React.useMemo(
-    () => [
-      slider3,
-      slider4,
-      slider6,
-      slider7,
-      slider1,
-      slider2,
-      slider5,
-      slider8,
-    ],
+    () => [slider1, slider2, slider3, slider4, slider5, slider6, slider7],
     []
   );
 
@@ -52,26 +41,51 @@ export const AboutUs = () => {
     slider.scrollLeft -= scrollAmount;
   };
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const slider = sliderRef.current;
-      const isAtStart = slider.scrollLeft === 0;
-      const isAtEnd =
-        slider.scrollLeft + slider.clientWidth >= slider.scrollWidth;
+  const handleScroll = () => {
+    const slider = sliderRef.current;
+    const isAtStart = slider.scrollLeft === 0;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    const isAtEnd = slider.scrollLeft >= maxScroll;
 
-      setIsLeftButtonDisabled(isAtStart);
-      setIsRightButtonDisabled(isAtEnd);
+    setIsLeftButtonDisabled(isAtStart);
+    setIsRightButtonDisabled(isAtEnd);
+  };
+
+  React.useEffect(() => {
+    const slider = sliderRef.current;
+
+    const handleInitialButtonStates = () => {
+      handleScroll();
+      setIsLeftButtonDisabled(slider.scrollLeft === 0);
+      setIsRightButtonDisabled(
+        slider.scrollLeft >= slider.scrollWidth - slider.clientWidth
+      );
     };
 
-    handleScroll();
+    const imageLoadPromises = images.map((imageSrc) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
 
-    const slider = sliderRef.current;
+    Promise.all(imageLoadPromises)
+      .then(() => {
+        handleInitialButtonStates();
+      })
+      .catch((error) => {
+        console.error("Error loading images:", error);
+        handleInitialButtonStates();
+      });
+
     slider.addEventListener("scroll", handleScroll);
 
     return () => {
       slider.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [images]);
 
   return (
     <AboutUsContainer id="about">
@@ -100,9 +114,7 @@ export const AboutUs = () => {
         </IconButton>
         <ImagesWrapper ref={sliderRef}>
           {images.map((image, index) => (
-            <ImageContainer key={index}>
-              <Images src={image} alt="" />
-            </ImageContainer>
+            <Images key={index} src={image} alt="" />
           ))}
         </ImagesWrapper>
         <IconButton
