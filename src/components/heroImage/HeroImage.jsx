@@ -1,6 +1,6 @@
 import * as React from "react";
-import hero from "./assets/hero.jpg";
-import heroCropped from "./assets/hero-cropped.jpg";
+import hero from "../../assets/hero/hero.jpg";
+import heroCropped from "../../assets/hero/hero-cropped.jpg";
 import { HeroImageWrapper, Image } from "./HeroImage.styles";
 
 export const HeroImage = () => {
