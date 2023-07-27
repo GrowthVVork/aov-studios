@@ -26,15 +26,15 @@ export const ImagesContainer = styled("div")(() => ({
     gridTemplateColumns: "1fr 1fr",
   },
   "@media (max-width: 40rem)": {
-    gridTemplateColumns: "1fr",
     gridAutoRows: "auto",
+    gridTemplateColumns: "1fr",
   },
 }));
 
 export const Image = styled("img")(() => ({
+  height: "100%",
   objectFit: "cover",
   width: "100%",
-  height: "100%",
   "&:nth-child(1)": {
     gridColumn: "span 2",
   },
@@ -42,8 +42,8 @@ export const Image = styled("img")(() => ({
     gridRow: "span 2",
   },
   "@media (max-width: 40rem)": {
-    gridRow: "span 1",
     gridColumn: "span 1",
+    gridRow: "span 1",
   },
   "@media (max-width: 40rem) and (nth-child(n + 6))": {
     display: "none",

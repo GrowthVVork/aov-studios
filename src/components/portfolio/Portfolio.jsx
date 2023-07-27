@@ -19,10 +19,10 @@ export const Portfolio = () => {
       <ContentHeading>Portfolio</ContentHeading>
       <ImagesContainer>
         <Image src={image1} alt="" />
-        <Image src={image2} alt="" />
+        <Image src={image5} alt="" />
         <Image src={image6} alt="" />
         <Image src={image7} alt="" />
-        <Image src={image5} alt="" />
+        <Image src={image2} alt="" />
         <Image src={image3} alt="" />
         <Image src={image4} alt="" />
       </ImagesContainer>
