@@ -9,6 +9,6 @@ export const Image = styled("img")(() => ({
   display: "block",
   margin: "0 auto",
   maxWidth: "100%",
-  paddingTop: "8rem",
+  paddingTop: "9rem",
   width: "90%",
 }));
