@@ -10,7 +10,7 @@ export const AboutUsContent = styled("div")(() => ({
   paddingBottom: "6rem",
   paddingLeft: "12%",
   "@media (max-width: 71rem)": {
-    paddingLeft: "5%",
+    paddingLeft: "8%",
   },
   "@media (max-width: 53rem)": {
     paddingLeft: 0,
