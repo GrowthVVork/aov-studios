@@ -21,7 +21,6 @@ export const AboutUsContent = styled("div")(() => ({
 }));
 
 export const ContentTextH4 = styled("h4")(() => ({
-  color: "#2d2e32",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "2.2rem",
   fontWeight: 400,
