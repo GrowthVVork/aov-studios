@@ -10,8 +10,8 @@ import slider6 from "../../assets/about/About-6.jpg";
 import slider7 from "../../assets/about/About-7.jpg";
 import {
   AboutUsContainer,
-  ContentTextH4,
-  ContentTextP,
+  ContentHeading,
+  ContentText,
   ImageSlider,
   Images,
   ImagesWrapper,
@@ -90,11 +90,11 @@ export const AboutUs = () => {
   return (
     <AboutUsContainer id="about">
       <AboutUsContent>
-        <ContentTextH4 textTransform={"uppercase"} variant="h4">
+        <ContentHeading textTransform={"uppercase"} variant="h4">
           Innovative Design Firm <br /> Architecture, Interior, Landscape &
           Construction Design
-        </ContentTextH4>
-        <ContentTextP>
+        </ContentHeading>
+        <ContentText>
           Welcome to our innovative design firm specializing in architecture,
           interior design, landscape design, and construction design. From
           residential to commercial projects, our skilled team creates
@@ -102,7 +102,7 @@ export const AboutUs = () => {
           we bring dreams to life by combining aesthetics with functionality.
           Discover our passion for design and let us transform your vision into
           reality.
-        </ContentTextP>
+        </ContentText>
       </AboutUsContent>
       <ImageSlider>
         <IconButton

@@ -4,23 +4,20 @@ export const AboutUsContainer = styled("div")(() => ({
   margin: "0 auto",
   padding: "5rem 0",
   width: "90%",
-  "@media (max-width: 71rem)": {
-    padding: "5rem 0",
-  },
-  "@media (max-width: 53rem)": {
-    padding: "5rem 0",
-  },
 }));
 
 export const AboutUsContent = styled("div")(() => ({
   paddingBottom: "6rem",
-  paddingLeft: "15%",
+  paddingLeft: "12%",
+  "@media (max-width: 71rem)": {
+    paddingLeft: "5%",
+  },
   "@media (max-width: 53rem)": {
     paddingLeft: 0,
   },
 }));
 
-export const ContentTextH4 = styled("h4")(() => ({
+export const ContentHeading = styled("h4")(() => ({
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "2.2rem",
   fontWeight: 400,
@@ -28,7 +25,7 @@ export const ContentTextH4 = styled("h4")(() => ({
   textTransform: "uppercase",
 }));
 
-export const ContentTextP = styled("p")(() => ({
+export const ContentText = styled("p")(() => ({
   color: "#767676",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "2.2rem",
