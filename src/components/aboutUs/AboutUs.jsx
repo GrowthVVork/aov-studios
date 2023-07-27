@@ -1,13 +1,13 @@
 import * as React from "react";
 import { IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "react-feather";
-import slider1 from "./assets/About-1.jpg";
-import slider2 from "./assets/About-2.jpg";
-import slider3 from "./assets/About-3.jpg";
-import slider4 from "./assets/About-4.jpg";
-import slider5 from "./assets/About-5.jpg";
-import slider6 from "./assets/About-6.jpg";
-import slider7 from "./assets/About-7.jpg";
+import slider1 from "../../assets/about/About-1.jpg";
+import slider2 from "../../assets/about/About-2.jpg";
+import slider3 from "../../assets/about/About-3.jpg";
+import slider4 from "../../assets/about/About-4.jpg";
+import slider5 from "../../assets/about/About-5.jpg";
+import slider6 from "../../assets/about/About-6.jpg";
+import slider7 from "../../assets/about/About-7.jpg";
 import {
   AboutUsContainer,
   ContentTextH4,
