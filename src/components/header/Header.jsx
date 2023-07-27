@@ -20,8 +20,20 @@ export const Header = () => {
     setHamburger(!hamburger);
   };
 
-  const pageUp = () => {
-    window.scrollTo({ top: (0, 0), behavior: "smooth" });
+  const getOffset = (element) => {
+    const headerOffset = 55;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - headerOffset;
+    return offsetPosition;
+  };
+
+  const pageUp = (sectionId) => {
+    const link = `#${sectionId}`;
+    const targetElement = document.querySelector(link);
+    if (targetElement) {
+      const offsetPosition = getOffset(targetElement);
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
   };
 
   const navlinks = [
@@ -50,11 +62,13 @@ export const Header = () => {
   return (
     <>
       <Nav>
-        <NavLogo onClick={pageUp}>AOV Studios</NavLogo>
+        <NavLogo onClick={() => pageUp("home")}>AOV Studios</NavLogo>
         <NavUl>
           {navlinks.map((item) => (
             <li key={item.name}>
-              <NavUlA href={item.link}>{item.name}</NavUlA>
+              <NavUlA onClick={() => pageUp(item.name.toLowerCase())}>
+                {item.name}
+              </NavUlA>
             </li>
           ))}
           <li onClick={() => hamburgerMenu()}>
@@ -78,7 +92,9 @@ export const Header = () => {
           <MobileNavUl>
             {navlinks.map((item) => (
               <li key={item.name} onClick={() => hamburgerMenu()}>
-                <MobileNavUla href={item.link}>{item.name}</MobileNavUla>
+                <MobileNavUla onClick={() => pageUp(item.name.toLowerCase())}>
+                  {item.name}
+                </MobileNavUla>
               </li>
             ))}
           </MobileNavUl>
@@ -94,7 +110,9 @@ export const Header = () => {
           <MobileNavUl>
             {navlinks.map((item) => (
               <li key={item.name} onClick={() => hamburgerMenu()}>
-                <MobileNavUla href={item.link}>{item.name}</MobileNavUla>
+                <MobileNavUla onClick={() => pageUp(item.name.toLowerCase())}>
+                  {item.name}
+                </MobileNavUla>
               </li>
             ))}
           </MobileNavUl>

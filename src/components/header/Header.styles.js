@@ -8,18 +8,21 @@ export const Nav = styled("nav")(() => ({
   height: "auto",
   justifyContent: "space-between",
   left: 0,
-  padding: "25px 40px 25px 50px",
+  padding: "25px 60px",
   position: "fixed",
   top: 0,
   width: "100%",
   zIndex: 200,
-  "@media (max-width: 400px)": {
-    padding: "25px 30px 25px 30px",
+  "@media (max-width: 71rem)": {
+    padding: "25px 55px",
+  },
+  "@media (max-width: 53rem)": {
+    padding: "25px 35px",
   },
   background: "rgb(249, 249, 249)",
 }));
 
-export const NavLogo = styled("h3")(() => ({
+export const NavLogo = styled("h1")(() => ({
   cursor: "default",
   color: "#2d2e32",
 }));
@@ -32,6 +35,7 @@ export const NavUl = styled("ul")(() => ({
 
 export const NavUlA = styled("a")(() => ({
   color: "#2d2e32",
+  cursor: "pointer",
   textDecoration: "none",
   transition: "all 0.23s",
   fontWeight: 600,
