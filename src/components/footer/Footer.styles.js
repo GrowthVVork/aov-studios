@@ -1,7 +1,7 @@
 import { Typography, styled } from "@mui/material";
 
 export const FooterContainer = styled("footer")(() => ({
-  backgroundColor: "#2d2e32",
+  background: "rgb(239, 239, 239)",
   padding: "4.8rem 0",
 }));
 
@@ -17,7 +17,6 @@ export const FooterWrapper = styled("div")(() => ({
 }));
 
 export const InfoHeader = styled("h3")(() => ({
-  color: "white",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "2.2rem",
   fontWeight: 400,
@@ -36,7 +35,7 @@ export const InfoContent = styled("ul")(() => ({
 }));
 
 export const ServicesList = styled("li")(() => ({
-  color: "white",
+  color: "#767676",
   display: "list-item",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "1.6rem",
@@ -47,7 +46,7 @@ export const ServicesList = styled("li")(() => ({
 }));
 
 export const InfoText = styled(Typography)(() => ({
-  color: "white",
+  color: "#767676",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "1.6rem",
   "@media (max-width: 40rem)": {

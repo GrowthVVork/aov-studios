@@ -19,7 +19,7 @@ export const Nav = styled("nav")(() => ({
   "@media (max-width: 53rem)": {
     padding: "25px 35px",
   },
-  background: "rgb(249, 249, 249)",
+  background: "rgb(239, 239, 239)",
 }));
 
 export const NavLogo = styled("h1")(() => ({
