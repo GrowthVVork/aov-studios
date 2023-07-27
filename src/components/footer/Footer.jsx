@@ -1,23 +1,39 @@
 import {
   FooterContainer,
-  InfoBox,
+  InfoContent,
   InfoHeader,
+  InfoText,
   FooterWrapper,
+  ServicesList,
 } from "./Footer.styles";
 
 export const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer id="contact">
       <FooterWrapper>
-        <InfoBox>
+        <div>
           <InfoHeader>Services</InfoHeader>
-        </InfoBox>
-        <InfoBox>
+          <InfoContent>
+            <ServicesList>Architecture</ServicesList>
+            <ServicesList>Interior Design</ServicesList>
+            <ServicesList>Landscape Design</ServicesList>
+            <ServicesList>Construction Design</ServicesList>
+          </InfoContent>
+        </div>
+
+        <div>
           <InfoHeader>Address</InfoHeader>
-        </InfoBox>
-        <InfoBox>
+          <InfoText>AOV Studios</InfoText>
+          <InfoText>Narayan Bagh,</InfoText>
+          <InfoText>Indore (M.P.)</InfoText>
+          <InfoText>India</InfoText>
+        </div>
+
+        <div>
           <InfoHeader>Contact Us </InfoHeader>
-        </InfoBox>
+          <InfoText paddingBottom="1rem">+91-7582898292</InfoText>
+          <InfoText>studiosaov@gmail.com</InfoText>
+        </div>
       </FooterWrapper>
     </FooterContainer>
   );

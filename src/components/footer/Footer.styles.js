@@ -1,31 +1,57 @@
-import { styled } from "@mui/material";
+import { Typography, styled } from "@mui/material";
 
 export const FooterContainer = styled("footer")(() => ({
   backgroundColor: "#2d2e32",
-  display: "block",
-  padding: "4rem 0",
-  width: "100%",
-  justifyContent: "space-between",
+  padding: "4.8rem 0",
 }));
 
 export const FooterWrapper = styled("div")(() => ({
   display: "flex",
-  width: "90%",
   justifyContent: "space-between",
-  alignContent: "center",
   margin: "0 auto",
-}));
-
-export const InfoBox = styled("div")(() => ({
-  backgroundColor: "#2d2e32",
-  width: "100%",
+  width: "90%",
+  "@media (max-width: 40rem)": {
+    flexDirection: "column",
+    gap: "3rem",
+  },
 }));
 
 export const InfoHeader = styled("h3")(() => ({
-  fontSize: "2rem",
   color: "white",
-  fontFamily: '"Poppins", sans-serif',
+  font: '300 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "2.2rem",
   fontWeight: 400,
+  letterSpacing: "0.02rem",
   marginBottom: "2.6rem",
   textTransform: "uppercase",
+  "@media (max-width: 40rem)": {
+    display: "flex",
+    justifyContent: "center",
+  },
+}));
+
+export const InfoContent = styled("ul")(() => ({
+  listStyleType: "none",
+  padding: 0,
+}));
+
+export const ServicesList = styled("li")(() => ({
+  color: "white",
+  display: "list-item",
+  font: '300 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "1.6rem",
+  "@media (max-width: 40rem)": {
+    display: "flex",
+    justifyContent: "center",
+  },
+}));
+
+export const InfoText = styled(Typography)(() => ({
+  color: "white",
+  font: '300 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "1.6rem",
+  "@media (max-width: 40rem)": {
+    display: "flex",
+    justifyContent: "center",
+  },
 }));
