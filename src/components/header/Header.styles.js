@@ -92,7 +92,7 @@ export const MobileNavSpan = styled("span")(() => ({
   right: "4rem",
   top: "2rem",
   ":hover": {
-    color: "#147efb",
+    color: "#767676",
     transition: "all .3s",
   },
 }));
@@ -110,7 +110,7 @@ export const MobileNavUla = styled("a")(() => ({
   fontWeight: 500,
   textDecoration: "none",
   ":hover": {
-    color: "#147efb",
+    color: "#767676",
     transition: "all .3s",
   },
 }));

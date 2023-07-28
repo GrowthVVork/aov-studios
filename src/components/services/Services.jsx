@@ -30,7 +30,7 @@ export const Services = () => {
 
       <ServiceItemContainer>
         <ServiceItemContent>
-          <ArchitectureIcon style={{ color: "#7d7d7d", fontSize: "40px" }} />
+          <ArchitectureIcon style={{ color: "#767676", fontSize: "40px" }} />
           <div>
             <ServiceItemHeading>Architecture</ServiceItemHeading>
             <ServiceItemText>
@@ -63,7 +63,7 @@ export const Services = () => {
           <ServiceItemImage src={service3_small} alt="" />
         </ServiceItemPicture>
         <ServiceItemContent>
-          <HouseIcon style={{ color: "#7d7d7d", fontSize: "40px" }} />
+          <HouseIcon style={{ color: "#767676", fontSize: "40px" }} />
           <div>
             <ServiceItemHeading>Interior Design</ServiceItemHeading>
             <ServiceItemText>
@@ -86,7 +86,7 @@ export const Services = () => {
 
       <ServiceItemContainer>
         <ServiceItemContent>
-          <DesignServicesIcon style={{ color: "#7d7d7d", fontSize: "40px" }} />
+          <DesignServicesIcon style={{ color: "#767676", fontSize: "40px" }} />
           <div>
             <ServiceItemHeading>Construction Design</ServiceItemHeading>
             <ServiceItemText>
