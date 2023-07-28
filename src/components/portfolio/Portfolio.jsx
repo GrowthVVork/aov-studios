@@ -9,18 +9,24 @@ import image3 from "../../assets/portfolio/Portfolio-4.jpg";
 import { SectionContainer, SectionHeading } from "../Shared.styles";
 import { Image, ImagesContainer } from "./Portfolio.styles";
 
-export const Portfolio = () => {
+export const PortfolioSection = () => {
+  const imageUrls = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7
+    // Add more image here if needed
+  ];
   return (
     <SectionContainer id="portfolio" style={{ paddingBottom: "7rem" }}>
       <SectionHeading>Portfolio</SectionHeading>
       <ImagesContainer>
-        <Image src={image1} alt="" />
-        <Image src={image5} alt="" />
-        <Image src={image6} alt="" />
-        <Image src={image7} alt="" />
-        <Image src={image2} alt="" />
-        <Image src={image3} alt="" />
-        <Image src={image4} alt="" />
+        {imageUrls.map((imageUrl, index) => (
+          <Image key={index} src={imageUrl} alt="" />
+        ))}
       </ImagesContainer>
     </SectionContainer>
   );
