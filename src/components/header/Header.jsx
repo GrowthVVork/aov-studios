@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Menu, X } from "react-feather";
 import {
   Nav,
   NavUl,
@@ -11,7 +12,6 @@ import {
   MobileNavUla,
   MobileMenu,
 } from "./Header.styles";
-import { Menu, X } from "react-feather";
 
 export const Header = () => {
   const [hamburger, setHamburger] = React.useState(false);
@@ -38,24 +38,24 @@ export const Header = () => {
 
   const navlinks = [
     {
-      name: "Contact",
-      link: "#contact",
-    },
-    {
-      name: "Portfolio",
-      link: "#portfolio",
-    },
-    {
-      name: "Services",
-      link: "#services",
+      name: "Home",
+      link: "#home",
     },
     {
       name: "About",
       link: "#about",
     },
     {
-      name: "Home",
-      link: "#home",
+      name: "Services",
+      link: "#services",
+    },
+    {
+      name: "Portfolio",
+      link: "#portfolio",
+    },
+    {
+      name: "Contact",
+      link: "#contact",
     },
   ];
 
@@ -73,7 +73,7 @@ export const Header = () => {
           ))}
           <li onClick={() => hamburgerMenu()}>
             <MobileMenu>
-              <Menu />
+              <Menu size={28} />
             </MobileMenu>
           </li>
         </NavUl>
@@ -84,9 +84,7 @@ export const Header = () => {
       {hamburger ? (
         <MobileNavOpen>
           <MobileNavSpan onClick={() => hamburgerMenu()}>
-            <i>
-              <X />
-            </i>
+            <X size={28} />
           </MobileNavSpan>
 
           <MobileNavUl>
@@ -102,11 +100,8 @@ export const Header = () => {
       ) : (
         <MobileNavClose>
           <MobileNavSpan onClick={() => hamburgerMenu()}>
-            <i>
-              <X />
-            </i>
+            <X size={28} />
           </MobileNavSpan>
-
           <MobileNavUl>
             {navlinks.map((item) => (
               <li key={item.name} onClick={() => hamburgerMenu()}>

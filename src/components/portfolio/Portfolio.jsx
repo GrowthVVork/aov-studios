@@ -11,7 +11,7 @@ import { Image, ImagesContainer } from "./Portfolio.styles";
 
 export const Portfolio = () => {
   return (
-    <SectionContainer id="portfolio">
+    <SectionContainer id="portfolio" style={{ paddingBottom: "7rem" }}>
       <SectionHeading>Portfolio</SectionHeading>
       <ImagesContainer>
         <Image src={image1} alt="" />
