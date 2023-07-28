@@ -1,6 +1,13 @@
 import React from "react";
 // import { Header, Hero, About, Services, Portfolio, Footer } from "./sections";
-import { AboutUs, Footer, Header, HeroImage, Portfolio } from "./components";
+import {
+  AboutUs,
+  Footer,
+  Header,
+  HeroImage,
+  Portfolio,
+  Services,
+} from "./components";
 
 const App = () => {
   // return (
@@ -28,6 +35,7 @@ const App = () => {
       <Header />
       <HeroImage />
       <AboutUs />
+      <Services />
       <Portfolio />
       <Footer />
     </>
