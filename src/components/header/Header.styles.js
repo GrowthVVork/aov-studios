@@ -29,6 +29,7 @@ export const NavLogo = styled("h1")(() => ({
 
 export const NavUl = styled("ul")(() => ({
   display: "flex",
+  flexDirection: "row-reverse",
   listStyle: "none",
   gap: "2rem",
 }));

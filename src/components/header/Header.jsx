@@ -38,24 +38,24 @@ export const Header = () => {
 
   const navlinks = [
     {
-      name: "Home",
-      link: "#home",
-    },
-    {
-      name: "About",
-      link: "#about",
-    },
-    {
-      name: "Services",
-      link: "#services",
+      name: "Contact",
+      link: "#contact",
     },
     {
       name: "Portfolio",
       link: "#portfolio",
     },
     {
-      name: "Contact",
-      link: "#contact",
+      name: "Services",
+      link: "#services",
+    },
+    {
+      name: "About",
+      link: "#about",
+    },
+    {
+      name: "Home",
+      link: "#home",
     },
   ];
 
