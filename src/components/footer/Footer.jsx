@@ -1,4 +1,5 @@
 import {
+  EmailWrapper,
   FooterContainer,
   FooterWrapper,
   InfoContent,
@@ -32,7 +33,9 @@ export const Footer = () => {
         <div>
           <InfoHeader>Contact Us </InfoHeader>
           <InfoText paddingBottom="1rem">+91-7582898292</InfoText>
-          <InfoText>studiosaov@gmail.com</InfoText>
+          <EmailWrapper href="mailto:studiosaov@gmail.com">
+            studiosaov@gmail.com
+          </EmailWrapper>
         </div>
       </FooterWrapper>
     </FooterContainer>

@@ -1,4 +1,4 @@
-import { Typography, styled } from "@mui/material";
+import { Link, Typography, styled } from "@mui/material";
 
 export const FooterContainer = styled("footer")(() => ({
   background: "rgb(239, 239, 239)",
@@ -46,6 +46,16 @@ export const ServicesList = styled("li")(() => ({
 }));
 
 export const InfoText = styled(Typography)(() => ({
+  color: "#767676",
+  font: '300 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "1.6rem",
+  "@media (max-width: 40rem)": {
+    display: "flex",
+    justifyContent: "center",
+  },
+}));
+
+export const EmailWrapper = styled(Link)(() => ({
   color: "#767676",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "1.6rem",
