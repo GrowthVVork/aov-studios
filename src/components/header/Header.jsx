@@ -2,15 +2,15 @@ import * as React from "react";
 import { Menu, X } from "react-feather";
 import {
   Nav,
+  NavLogo,
   NavUl,
   NavUlA,
-  NavLogo,
-  MobileNavOpen,
+  MobileMenu,
   MobileNavClose,
+  MobileNavOpen,
   MobileNavSpan,
   MobileNavUl,
   MobileNavUla,
-  MobileMenu,
 } from "./Header.styles";
 
 export const Header = () => {
@@ -20,58 +20,52 @@ export const Header = () => {
     setHamburger(!hamburger);
   };
 
-  const getOffset = (element) => {
-    const headerOffset = 55;
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - headerOffset;
-    return offsetPosition;
-  };
-
-  const pageUp = (sectionId) => {
-    const link = `#${sectionId}`;
-    const targetElement = document.querySelector(link);
-    if (targetElement) {
-      const offsetPosition = getOffset(targetElement);
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 55;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - headerOffset;
+      window.scrollBy({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
   const navlinks = [
     {
       name: "Home",
-      link: "#home",
+      link: "home",
     },
     {
       name: "About",
-      link: "#about",
+      link: "about",
     },
     {
       name: "Services",
-      link: "#services",
+      link: "services",
     },
     {
       name: "Portfolio",
-      link: "#portfolio",
+      link: "portfolio",
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "contact",
     },
   ];
 
   return (
     <>
       <Nav>
-        <NavLogo onClick={() => pageUp("home")}>AOV Studios</NavLogo>
+        <NavLogo onClick={() => scrollToSection("home")}>AOV Studios</NavLogo>
         <NavUl>
           {navlinks.map((item) => (
             <li key={item.name}>
-              <NavUlA onClick={() => pageUp(item.name.toLowerCase())}>
+              <NavUlA onClick={() => scrollToSection(item.link)}>
                 {item.name}
               </NavUlA>
             </li>
           ))}
-          <li onClick={() => hamburgerMenu()}>
+          <li onClick={hamburgerMenu}>
             <MobileMenu>
               <Menu size={28} />
             </MobileMenu>
@@ -80,7 +74,6 @@ export const Header = () => {
       </Nav>
 
       {/* mobile nav */}
-
       {hamburger ? (
         <MobileNavOpen>
           <MobileNavSpan onClick={() => hamburgerMenu()}>
@@ -90,7 +83,7 @@ export const Header = () => {
           <MobileNavUl>
             {navlinks.map((item) => (
               <li key={item.name} onClick={() => hamburgerMenu()}>
-                <MobileNavUla onClick={() => pageUp(item.name.toLowerCase())}>
+                <MobileNavUla onClick={() => scrollToSection(item.link)}>
                   {item.name}
                 </MobileNavUla>
               </li>
@@ -105,7 +98,7 @@ export const Header = () => {
           <MobileNavUl>
             {navlinks.map((item) => (
               <li key={item.name} onClick={() => hamburgerMenu()}>
-                <MobileNavUla onClick={() => pageUp(item.name.toLowerCase())}>
+                <MobileNavUla onClick={() => scrollToSection(item.link)}>
                   {item.name}
                 </MobileNavUla>
               </li>
