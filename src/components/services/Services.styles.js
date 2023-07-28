@@ -1,11 +1,11 @@
 import { Button, styled } from "@mui/material";
 
 export const ServiceItemContainer = styled("div")(({ reverse }) => ({
-  display: "flex",
-  gridTemplateColumns: "1fr 1fr",
-  flexDirection: reverse ? "row-reverse" : "row",
   alignItems: "center",
+  display: "flex",
+  flexDirection: reverse ? "row-reverse" : "row",
   gap: "3rem 9rem",
+  gridTemplateColumns: "1fr 1fr",
   "&:not(:last-child)": {
     paddingBottom: "8rem",
   },
@@ -19,8 +19,8 @@ export const ServiceItemContainer = styled("div")(({ reverse }) => ({
 
 export const ServiceItemContent = styled("div")(() => ({
   display: "grid",
-  gridTemplateColumns: "auto 1fr",
   gap: "3rem",
+  gridTemplateColumns: "auto 1fr",
   width: "100%",
   "@media (max-width: 71rem)": {
     width: "100%",
