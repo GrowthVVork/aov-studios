@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { styled, IconButton } from "@mui/material";
 
 export const AboutUsContainer = styled("div")(() => ({
   margin: "0 auto",
@@ -44,6 +44,7 @@ export const ImagesWrapper = styled("div")(() => ({
   display: "flex",
   columnGap: "20px",
   overflowX: "hidden",
+  margin: "0 0.5rem",
   width: "100%",
 }));
 
@@ -58,4 +59,8 @@ export const Images = styled("img")(() => ({
     minWidth: "100%",
     width: "100%",
   },
+}));
+
+export const StyledIconButton = styled(IconButton)(() => ({
+  borderRadius: "5px",
 }));

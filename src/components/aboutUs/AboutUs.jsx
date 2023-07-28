@@ -1,5 +1,4 @@
 import * as React from "react";
-import { IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import slider1 from "../../assets/about/About-1.jpg";
 import slider2 from "../../assets/about/About-2.jpg";
@@ -16,6 +15,7 @@ import {
   Images,
   ImagesWrapper,
   AboutUsContent,
+  StyledIconButton,
 } from "./AboutUs.styles";
 
 export const AboutUs = () => {
@@ -105,25 +105,23 @@ export const AboutUs = () => {
         </ContentText>
       </AboutUsContent>
       <ImageSlider>
-        <IconButton
-          size="large"
-          onClick={handlePrevClick}
+        <StyledIconButton
           disabled={isLeftButtonDisabled}
+          onClick={handlePrevClick}
         >
           <ChevronLeft style={{ cursor: "pointer" }} />
-        </IconButton>
+        </StyledIconButton>
         <ImagesWrapper ref={sliderRef}>
           {images.map((image, index) => (
             <Images key={index} src={image} alt="" />
           ))}
         </ImagesWrapper>
-        <IconButton
-          size="large"
-          onClick={handleNextClick}
+        <StyledIconButton
           disabled={isRightButtonDisabled}
+          onClick={handleNextClick}
         >
           <ChevronRight style={{ cursor: "pointer" }} />
-        </IconButton>
+        </StyledIconButton>
       </ImageSlider>
     </AboutUsContainer>
   );
