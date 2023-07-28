@@ -8,7 +8,7 @@ export const PortfolioContainer = styled("div")(() => ({
 
 export const ContentHeading = styled("h4")(() => ({
   font: '300 1rem/1.7 "Poppins", sans-serif',
-  fontSize: "2.2rem",
+  fontSize: "2.3rem",
   fontWeight: 400,
   marginBottom: "3rem",
   textAlign: "center",
