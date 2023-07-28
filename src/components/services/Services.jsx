@@ -1,11 +1,14 @@
 import * as React from "react";
 import { ChevronRight } from "react-feather";
-import  service1_1  from "../../assets/services/Services1-1.jpg";
-import  service1_2  from "../../assets/services/Services1-2.jpg";
-import  service1_3  from "../../assets/services/Services1-3.jpg";
-import  service2_1  from "../../assets/services/Services2-1.jpg";
-import  service2_2  from "../../assets/services/Services2-2.jpg";
-import  service2_3  from "../../assets/services/Services2-3.jpg";
+import service1_1 from "../../assets/services/Services1-1.jpg";
+import service1_2 from "../../assets/services/Services1-2.jpg";
+import service1_3 from "../../assets/services/Services1-3.jpg";
+import service2_1 from "../../assets/services/Services2-1.jpg";
+import service2_2 from "../../assets/services/Services2-2.jpg";
+import service2_3 from "../../assets/services/Services2-3.jpg";
+import service3_1 from "../../assets/services/Services3-1.jpg";
+import service3_2 from "../../assets/services/Services3-2.jpg";
+import service3_3 from "../../assets/services/Services3-3.jpg";
 import architecture from "../../assets/icons/architecture.png";
 import interior from "../../assets/icons/interior.png";
 import renovation from "../../assets/icons/renovation.png";
@@ -56,7 +59,9 @@ export const Services = () => {
 
       <ServiceItemContainer reverse>
         <ServiceItemPicture>
-          <ServiceItemImage src={service1_1} alt="" />
+          <source srcset={service3_1} media="(min-width: 850px)" />
+          <source srcset={service3_2} media="(min-width: 500px)" />
+          <ServiceItemImage src={service3_3} alt="" />
         </ServiceItemPicture>
         <ServiceItemContent>
           <img src={interior} alt="" />
