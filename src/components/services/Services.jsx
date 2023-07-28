@@ -44,9 +44,9 @@ export const Services = () => {
               planning, we have successfully completed projects involving both
               new constructions and renovations of existing buildings.
             </ServiceItemText>
-            <StyledButton variant="contained" endIcon={<ChevronRight />}>
+            {/* <StyledButton variant="contained" endIcon={<ChevronRight />}>
               Learn More
-            </StyledButton>
+            </StyledButton> */}
           </div>
         </ServiceItemContent>
         <ServiceItemPicture>
@@ -77,9 +77,9 @@ export const Services = () => {
               nature of the profession and strive to address key aspects of
               adapting to change.
             </ServiceItemText>
-            <StyledButton variant="contained" endIcon={<ChevronRight />}>
+            {/* <StyledButton variant="contained" endIcon={<ChevronRight />}>
               Learn More
-            </StyledButton>
+            </StyledButton> */}
           </div>
         </ServiceItemContent>
       </ServiceItemContainer>
@@ -97,9 +97,9 @@ export const Services = () => {
               consistently deliver highly satisfying outcomes for the agencies
               and organizations responsible for the projects.
             </ServiceItemText>
-            <StyledButton variant="contained" endIcon={<ChevronRight />}>
+            {/* <StyledButton variant="contained" endIcon={<ChevronRight />}>
               Learn More
-            </StyledButton>
+            </StyledButton> */}
           </div>
         </ServiceItemContent>
         <ServiceItemPicture>
