@@ -9,7 +9,7 @@ import image3 from "../../assets/portfolio/Portfolio-4.jpg";
 import { SectionContainer, SectionHeading } from "../Shared.styles";
 import { Image, ImagesContainer } from "./Portfolio.styles";
 
-export const PortfolioSection = () => {
+export const Portfolio = () => {
   const imageUrls = [
     image1,
     image2,
