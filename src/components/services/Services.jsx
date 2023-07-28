@@ -1,17 +1,17 @@
 import * as React from "react";
 import { ChevronRight } from "react-feather";
-import service1_1 from "../../assets/services/Services1-1.jpg";
-import service1_2 from "../../assets/services/Services1-2.jpg";
-import service1_3 from "../../assets/services/Services1-3.jpg";
-import service2_1 from "../../assets/services/Services2-1.jpg";
-import service2_2 from "../../assets/services/Services2-2.jpg";
-import service2_3 from "../../assets/services/Services2-3.jpg";
-import service3_1 from "../../assets/services/Services3-1.jpg";
-import service3_2 from "../../assets/services/Services3-2.jpg";
-import service3_3 from "../../assets/services/Services3-3.jpg";
-import architecture from "../../assets/icons/architecture.png";
-import interior from "../../assets/icons/interior.png";
-import renovation from "../../assets/icons/renovation.png";
+import ArchitectureIcon from "@mui/icons-material/Architecture";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import HouseIcon from "@mui/icons-material/House";
+import service1_large from "../../assets/services/Services1-large.jpg";
+import service1_medium from "../../assets/services/Services1-medium.jpg";
+import service1_small from "../../assets/services/Services1-small.jpg";
+import service2_large from "../../assets/services/Services2-large.jpg";
+import service2_medium from "../../assets/services/Services2-medium.jpg";
+import service2_small from "../../assets/services/Services2-small.jpg";
+import service3_large from "../../assets/services/Services3-large.jpg";
+import service3_medium from "../../assets/services/Services3-medium.jpg";
+import service3_small from "../../assets/services/Services3-small.jpg";
 import { SectionContainer, SectionHeading } from "../Shared.styles";
 import {
   ServiceItemContainer,
@@ -30,7 +30,7 @@ export const Services = () => {
 
       <ServiceItemContainer>
         <ServiceItemContent>
-          <img src={architecture} alt="" />
+          <ArchitectureIcon style={{ color: "#7d7d7d", fontSize: "40px" }} />
           <div>
             <ServiceItemHeading>Architecture</ServiceItemHeading>
             <ServiceItemText>
@@ -50,20 +50,20 @@ export const Services = () => {
           </div>
         </ServiceItemContent>
         <ServiceItemPicture>
-          <source srcset={service1_1} media="(min-width: 850px)" />
-          <source srcset={service1_2} media="(min-width: 500px)" />
-          <ServiceItemImage src={service1_3} alt="" />
+          <source srcset={service1_large} media="(min-width: 850px)" />
+          <source srcset={service1_medium} media="(min-width: 500px)" />
+          <ServiceItemImage src={service1_small} alt="" />
         </ServiceItemPicture>
       </ServiceItemContainer>
 
       <ServiceItemContainer reverse>
         <ServiceItemPicture>
-          <source srcset={service3_1} media="(min-width: 850px)" />
-          <source srcset={service3_2} media="(min-width: 500px)" />
-          <ServiceItemImage src={service3_3} alt="" />
+          <source srcset={service3_large} media="(min-width: 850px)" />
+          <source srcset={service3_medium} media="(min-width: 500px)" />
+          <ServiceItemImage src={service3_small} alt="" />
         </ServiceItemPicture>
         <ServiceItemContent>
-          <img src={interior} alt="" />
+          <HouseIcon style={{ color: "#7d7d7d", fontSize: "40px" }} />
           <div>
             <ServiceItemHeading>Interior Design</ServiceItemHeading>
             <ServiceItemText>
@@ -86,7 +86,7 @@ export const Services = () => {
 
       <ServiceItemContainer>
         <ServiceItemContent>
-          <img src={renovation} alt="" />
+          <DesignServicesIcon style={{ color: "#7d7d7d", fontSize: "40px" }} />
           <div>
             <ServiceItemHeading>Construction Design</ServiceItemHeading>
             <ServiceItemText>
@@ -103,9 +103,9 @@ export const Services = () => {
           </div>
         </ServiceItemContent>
         <ServiceItemPicture>
-          <source srcset={service2_1} media="(min-width: 850px)" />
-          <source srcset={service2_2} media="(min-width: 500px)" />
-          <ServiceItemImage src={service2_3} alt="" />
+          <source srcset={service2_large} media="(min-width: 850px)" />
+          <source srcset={service2_medium} media="(min-width: 500px)" />
+          <ServiceItemImage src={service2_small} alt="" />
         </ServiceItemPicture>
       </ServiceItemContainer>
     </SectionContainer>
