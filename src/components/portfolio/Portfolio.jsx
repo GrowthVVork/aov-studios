@@ -6,17 +6,13 @@ import image2 from "../../assets/about/About-2.jpg";
 import image6 from "../../assets/portfolio/Portfolio-1.jpg";
 import image7 from "../../assets/portfolio/Portfolio-2.jpg";
 import image3 from "../../assets/portfolio/Portfolio-4.jpg";
-import {
-  ContentHeading,
-  Image,
-  ImagesContainer,
-  PortfolioContainer,
-} from "./Portfolio.styles";
+import { SectionContainer, SectionHeading } from "../Shared.styles";
+import { Image, ImagesContainer } from "./Portfolio.styles";
 
 export const Portfolio = () => {
   return (
-    <PortfolioContainer id="portfolio">
-      <ContentHeading>Portfolio</ContentHeading>
+    <SectionContainer id="portfolio">
+      <SectionHeading>Portfolio</SectionHeading>
       <ImagesContainer>
         <Image src={image1} alt="" />
         <Image src={image5} alt="" />
@@ -26,6 +22,6 @@ export const Portfolio = () => {
         <Image src={image3} alt="" />
         <Image src={image4} alt="" />
       </ImagesContainer>
-    </PortfolioContainer>
+    </SectionContainer>
   );
 };

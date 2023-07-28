@@ -12,22 +12,21 @@ import service3_3 from "../../assets/services/Services3-3.jpg";
 import architecture from "../../assets/icons/architecture.png";
 import interior from "../../assets/icons/interior.png";
 import renovation from "../../assets/icons/renovation.png";
+import { SectionContainer, SectionHeading } from "../Shared.styles";
 import {
   ServiceItemContainer,
+  ServiceItemContent,
   ServiceItemHeading,
   ServiceItemImage,
   ServiceItemPicture,
   ServiceItemText,
-  ServiceItemContent,
-  ServicesContainer,
-  ServicesHeading,
   StyledButton,
 } from "./Services.styles";
 
 export const Services = () => {
   return (
-    <ServicesContainer id="services">
-      <ServicesHeading>Services</ServicesHeading>
+    <SectionContainer id="services">
+      <SectionHeading>Services</SectionHeading>
 
       <ServiceItemContainer>
         <ServiceItemContent>
@@ -109,6 +108,6 @@ export const Services = () => {
           <ServiceItemImage src={service2_3} alt="" />
         </ServiceItemPicture>
       </ServiceItemContainer>
-    </ServicesContainer>
+    </SectionContainer>
   );
 };

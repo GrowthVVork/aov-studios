@@ -1,9 +1,9 @@
 import {
   FooterContainer,
+  FooterWrapper,
   InfoContent,
   InfoHeader,
   InfoText,
-  FooterWrapper,
   ServicesList,
 } from "./Footer.styles";
 

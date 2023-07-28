@@ -7,14 +7,13 @@ import slider4 from "../../assets/about/About-4.jpg";
 import slider5 from "../../assets/about/About-5.jpg";
 import slider6 from "../../assets/about/About-6.jpg";
 import slider7 from "../../assets/about/About-7.jpg";
+import { SectionContainer, SectionHeading } from "../Shared.styles";
 import {
-  AboutUsContainer,
-  ContentHeading,
-  ContentText,
-  ImageSlider,
-  Images,
-  ImagesWrapper,
   AboutUsContent,
+  ContentText,
+  Images,
+  ImageSlider,
+  ImagesWrapper,
   StyledIconButton,
 } from "./AboutUs.styles";
 
@@ -88,12 +87,12 @@ export const AboutUs = () => {
   }, [images]);
 
   return (
-    <AboutUsContainer id="about">
+    <SectionContainer id="about">
       <AboutUsContent>
-        <ContentHeading textTransform={"uppercase"} variant="h4">
+        <SectionHeading style={{ textAlign: "left" }}>
           Innovative Design Firm <br /> Architecture, Interior, Landscape &
           Construction Design
-        </ContentHeading>
+        </SectionHeading>
         <ContentText>
           Welcome to our innovative design firm specializing in architecture,
           interior design, landscape design, and construction design. From
@@ -123,6 +122,6 @@ export const AboutUs = () => {
           <ChevronRight style={{ cursor: "pointer" }} />
         </StyledIconButton>
       </ImageSlider>
-    </AboutUsContainer>
+    </SectionContainer>
   );
 };
