@@ -42,7 +42,7 @@ export const NavUlA = styled("a")(() => ({
   "@media (max-width: 900px)": {
     display: "none",
   },
-  ":hover": { color: "#147efb" },
+  ":hover": { color: "#767676" },
 }));
 
 export const MobileMenu = styled("i")(() => ({
@@ -52,7 +52,7 @@ export const MobileMenu = styled("i")(() => ({
   "@media (max-width: 900px)": {
     display: "flex",
   },
-  ":hover": { color: "#147efb", transition: "all .3s" },
+  ":hover": { color: "#767676", transition: "all .3s" },
 }));
 
 export const MobileNavOpen = styled("div")(() => ({
