@@ -19,7 +19,7 @@ export const AboutUsContent = styled("div")(() => ({
 
 export const ContentHeading = styled("h4")(() => ({
   font: '300 1rem/1.7 "Poppins", sans-serif',
-  fontSize: "2.2rem",
+  fontSize: "2.3rem",
   fontWeight: 400,
   marginBottom: "3rem",
   textTransform: "uppercase",
@@ -28,7 +28,7 @@ export const ContentHeading = styled("h4")(() => ({
 export const ContentText = styled("p")(() => ({
   color: "#767676",
   font: '300 1rem/1.7 "Poppins", sans-serif',
-  fontSize: "2.2rem",
+  fontSize: "2.3rem",
   fontWeight: 200,
   letterSpacing: "0.02rem",
   marginRight: "1rem",
