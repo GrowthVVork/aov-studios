@@ -4,6 +4,9 @@ export const SectionContainer = styled("div")(() => ({
   margin: "0 auto",
   padding: "5rem 0",
   width: "90%",
+  "@media (max-width: 53rem)": {
+    padding: "4.2rem 0",
+  },
 }));
 
 export const SectionHeading = styled("h4")(() => ({
