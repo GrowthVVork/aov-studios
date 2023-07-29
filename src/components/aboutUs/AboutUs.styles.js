@@ -18,6 +18,9 @@ export const ContentText = styled("p")(() => ({
   fontWeight: 200,
   letterSpacing: "0.02rem",
   marginRight: "1rem",
+  "@media (max-width: 53rem)": {
+    marginRight: 0,
+  },
 }));
 
 export const ImageSlider = styled("div")(() => ({
