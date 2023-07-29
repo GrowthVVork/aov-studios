@@ -37,7 +37,7 @@ export const ServiceItemHeading = styled("h5")(() => ({
 export const ServiceItemText = styled("p")(() => ({
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "1.6rem",
-  padding: "3rem 0",
+  padding: "2.6rem 0 0 0",
   width: "min(100%, 45ch)",
   "@media (max-width: 71rem)": {
     width: "min(75ch, 100%)",
@@ -51,6 +51,7 @@ export const StyledButton = styled(Button)(() => ({
   cursor: "pointer",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "1.6rem",
+  margin: "2.6rem 0 0 0",
   textTransform: "none",
   "&:hover": {
     backgroundColor: "white",

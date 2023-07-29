@@ -24,7 +24,11 @@ export const Nav = styled("nav")(() => ({
 
 export const NavLogo = styled("h1")(() => ({
   cursor: "default",
-  color: "#2d2e32",
+  fontSize: "2.5rem",
+  fontWeight: 'normal',
+  "@media (max-width: 53rem)": {
+    fontSize: "2.2rem",
+  },
 }));
 
 export const NavUl = styled("ul")(() => ({
