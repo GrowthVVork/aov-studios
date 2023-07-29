@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChevronRight } from "react-feather";
+// import { ChevronRight } from "react-feather";
 import ArchitectureIcon from "@mui/icons-material/Architecture";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import HouseIcon from "@mui/icons-material/House";
@@ -20,7 +20,7 @@ import {
   ServiceItemImage,
   ServiceItemPicture,
   ServiceItemText,
-  StyledButton,
+  //StyledButton,
 } from "./Services.styles";
 
 export const Services = () => {
