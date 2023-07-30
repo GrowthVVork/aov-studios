@@ -65,8 +65,8 @@ export const Header = () => {
               </NavUlA>
             </li>
           ))}
-          <li style={{ gap: 0 }} onClick={hamburgerMenu}>
-            <MobileMenu style={{ gap: 0 }}>
+          <li onClick={hamburgerMenu}>
+            <MobileMenu>
               <Menu size={28} />
             </MobileMenu>
           </li>
