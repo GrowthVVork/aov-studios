@@ -32,24 +32,24 @@ export const Header = () => {
 
   const navlinks = [
     {
-      name: "Home",
-      link: "home",
-    },
-    {
-      name: "About",
-      link: "about",
-    },
-    {
-      name: "Services",
-      link: "services",
+      name: "Contact",
+      link: "contact",
     },
     {
       name: "Portfolio",
       link: "portfolio",
     },
     {
-      name: "Contact",
-      link: "contact",
+      name: "Services",
+      link: "services",
+    },
+    {
+      name: "About",
+      link: "about",
+    },
+    {
+      name: "Home",
+      link: "home",
     },
   ];
 
@@ -80,7 +80,7 @@ export const Header = () => {
             <X size={28} />
           </MobileNavSpan>
 
-          <MobileNavUl>
+          <MobileNavUl style={{ flexDirection: "column-reverse" }}>
             {navlinks.map((item) => (
               <li key={item.name} onClick={() => hamburgerMenu()}>
                 <MobileNavUla onClick={() => scrollToSection(item.link)}>
@@ -95,7 +95,7 @@ export const Header = () => {
           <MobileNavSpan onClick={() => hamburgerMenu()}>
             <X size={28} />
           </MobileNavSpan>
-          <MobileNavUl>
+          <MobileNavUl style={{ flexDirection: "column-reverse" }}>
             {navlinks.map((item) => (
               <li key={item.name} onClick={() => hamburgerMenu()}>
                 <MobileNavUla onClick={() => scrollToSection(item.link)}>
