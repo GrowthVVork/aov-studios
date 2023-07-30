@@ -61,6 +61,7 @@ export const StyledButton = styled(Button)(() => ({
 export const ServiceItemPicture = styled("picture")(() => ({
   display: "block",
   maxWidth: "100%",
+  width: "100%",
   "&:nth-of-type(odd)": {
     order: -1,
   },
