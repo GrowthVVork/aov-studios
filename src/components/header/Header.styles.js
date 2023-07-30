@@ -25,7 +25,7 @@ export const Nav = styled("nav")(() => ({
 export const NavLogo = styled("h1")(() => ({
   cursor: "default",
   fontSize: "2.5rem",
-  fontWeight: 'normal',
+  fontWeight: "normal",
   "@media (max-width: 53rem)": {
     fontSize: "2.2rem",
   },
@@ -33,8 +33,12 @@ export const NavLogo = styled("h1")(() => ({
 
 export const NavUl = styled("ul")(() => ({
   display: "flex",
-  listStyle: "none",
+  flexDirection: "row-reverse",
   gap: "2rem",
+  listStyle: "none",
+  "@media (max-width: 900px)": {
+    flexDirection: "row",
+  },
 }));
 
 export const NavUlA = styled("a")(() => ({
@@ -42,7 +46,6 @@ export const NavUlA = styled("a")(() => ({
   cursor: "pointer",
   textDecoration: "none",
   transition: "all 0.23s",
-  fontWeight: 600,
   "@media (max-width: 900px)": {
     display: "none",
   },
