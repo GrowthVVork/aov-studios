@@ -6,6 +6,7 @@ import {
   InfoHeader,
   InfoText,
   ServicesList,
+  LinkWrapper,
 } from "./Footer.styles";
 
 export const Footer = () => {
@@ -36,6 +37,16 @@ export const Footer = () => {
           <EmailWrapper href="mailto:studiosaov@gmail.com">
             studiosaov@gmail.com
           </EmailWrapper>
+        </div>
+        <div>
+          <InfoHeader>Made by</InfoHeader>
+          <LinkWrapper href="https://github.com/tejas-k3" target="_blank">
+            Tejas
+          </LinkWrapper>
+          <br></br>
+          <LinkWrapper href="https://github.com/siddhi-gh" target="_blank">
+            Siddhi
+          </LinkWrapper>
         </div>
       </FooterWrapper>
     </FooterContainer>

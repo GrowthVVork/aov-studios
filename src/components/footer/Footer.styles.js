@@ -64,3 +64,17 @@ export const EmailWrapper = styled(Link)(() => ({
     justifyContent: "center",
   },
 }));
+
+export const LinkWrapper = styled(Link)(() => ({
+  color: "#767676",
+  font: '300 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "1.6rem",
+  "@media (max-width: 40rem)": {
+    display: "flex",
+    justifyContent: "center",
+  },
+  textDecoration: "none",
+  "&:hover": {
+    textDecoration: "underline",
+  },
+}));
