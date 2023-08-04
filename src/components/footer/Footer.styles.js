@@ -16,6 +16,11 @@ export const FooterWrapper = styled("div")(() => ({
   },
 }));
 
+export const FooterContentWrapper = styled("div")(() => ({
+  display: "flex",
+  flexDirection: "column",
+}));
+
 export const InfoHeader = styled("h3")(() => ({
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "2.2rem",
@@ -55,17 +60,7 @@ export const InfoText = styled(Typography)(() => ({
   },
 }));
 
-export const EmailWrapper = styled(Link)(() => ({
-  color: "#767676",
-  font: '300 1rem/1.7 "Poppins", sans-serif',
-  fontSize: "1.6rem",
-  "@media (max-width: 40rem)": {
-    display: "flex",
-    justifyContent: "center",
-  },
-}));
-
-export const LinkWrapper = styled(Link)(() => ({
+export const InfoLink = styled(Link)(() => ({
   color: "#767676",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "1.6rem",
@@ -74,7 +69,7 @@ export const LinkWrapper = styled(Link)(() => ({
     justifyContent: "center",
   },
   textDecoration: "none",
-  "&:hover": {
+  ":hover": {
     textDecoration: "underline",
   },
 }));
