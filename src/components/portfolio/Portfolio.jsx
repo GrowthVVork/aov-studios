@@ -21,7 +21,7 @@ export const Portfolio = () => {
     // Add more image here if needed
   ];
   return (
-    <SectionContainer id="portfolio" style={{ paddingBottom: "7rem" }}>
+    <SectionContainer id="portfolio" style={{ paddingBottom: "3rem" }}>
       <SectionHeading>Portfolio</SectionHeading>
       <ImagesContainer>
         {imageUrls.map((imageUrl, index) => (

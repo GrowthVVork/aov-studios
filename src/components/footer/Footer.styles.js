@@ -2,7 +2,7 @@ import { Link, Typography, styled } from "@mui/material";
 
 export const FooterContainer = styled("footer")(() => ({
   background: "rgb(239, 239, 239)",
-  padding: "4.8rem 0",
+  padding: "1.5rem 0",
 }));
 
 export const FooterWrapper = styled("div")(() => ({
@@ -14,6 +14,11 @@ export const FooterWrapper = styled("div")(() => ({
     flexDirection: "column",
     gap: "3rem",
   },
+}));
+
+export const FooterContentWrapper = styled("div")(() => ({
+  display: "flex",
+  flexDirection: "column",
 }));
 
 export const InfoHeader = styled("h3")(() => ({
@@ -55,12 +60,16 @@ export const InfoText = styled(Typography)(() => ({
   },
 }));
 
-export const EmailWrapper = styled(Link)(() => ({
+export const InfoLink = styled(Link)(() => ({
   color: "#767676",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "1.6rem",
   "@media (max-width: 40rem)": {
     display: "flex",
     justifyContent: "center",
+  },
+  textDecoration: "none",
+  ":hover": {
+    textDecoration: "underline",
   },
 }));
