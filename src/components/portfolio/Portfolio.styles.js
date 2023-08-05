@@ -20,17 +20,17 @@ export const Image = styled("img")(() => ({
   height: "100%",
   objectFit: "cover",
   width: "100%",
-  "&:nth-child(1)": {
+  "&:nth-of-type(1)": {
     gridColumn: "span 2",
   },
-  "&:nth-child(1), &:nth-child(3), &:nth-child(4)": {
+  "&:nth-of-type(1), &:nth-of-type(3), &:nth-of-type(4)": {
     gridRow: "span 2",
   },
   "@media (max-width: 40rem)": {
     gridColumn: "span 1",
     gridRow: "span 1",
   },
-  "@media (max-width: 40rem) and (nth-child(n + 6))": {
+  "@media (max-width: 40rem) and (nth-of-type(n + 6))": {
     display: "none",
   },
 }));
