@@ -2,7 +2,7 @@ import { Link, Typography, styled } from "@mui/material";
 
 export const FooterContainer = styled("footer")(() => ({
   background: "rgb(239, 239, 239)",
-  padding: "1.5rem 0",
+  padding: "4rem 0",
 }));
 
 export const FooterWrapper = styled("div")(() => ({
@@ -22,12 +22,12 @@ export const FooterContentWrapper = styled("div")(() => ({
 }));
 
 export const InfoHeader = styled("h3")(() => ({
-  font: '300 1rem/1.7 "Poppins", sans-serif',
-  fontSize: "2.2rem",
-  fontWeight: 400,
+  font: '500 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "1.7rem",
+  fontWeight: "bold",
   letterSpacing: "0.02rem",
-  marginBottom: "2.6rem",
-  textTransform: "uppercase",
+  //marginBottom: "2.6rem",
+  //textTransform: "uppercase",
   "@media (max-width: 40rem)": {
     display: "flex",
     justifyContent: "center",
