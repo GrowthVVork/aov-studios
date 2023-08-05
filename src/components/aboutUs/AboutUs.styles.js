@@ -2,12 +2,12 @@ import { styled, IconButton } from "@mui/material";
 
 export const AboutUsContent = styled("div")(() => ({
   paddingBottom: "6rem",
-  paddingLeft: "12%",
+  paddingLeft: "10%",
   "@media (max-width: 71rem)": {
     paddingLeft: "8%",
   },
   "@media (max-width: 53rem)": {
-    paddingLeft: 0,
+    paddingLeft: "6%",
   },
 }));
 
