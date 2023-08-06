@@ -12,21 +12,25 @@ import { FormControl } from "@mui/material";
 export const Form = () => {
   const formRef = React.useRef();
 
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [phone, setPhone] = React.useState("");
-  const [location, setLocation] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const fields = [
+    { label: "Name*", type: "text", name: "user_name" },
+    { label: "Email*", type: "email", name: "user_email" },
+    { label: "Phone No.*", type: "text", name: "user_phone" },
+    { label: "Message*", type: "textarea", name: "message" },
+  ];
 
-  const resetForm = () => {
-    setName("");
-    setEmail("");
-    setPhone("");
-    setLocation("");
-    setMessage("");
+  const [formData, setFormData] = React.useState(
+    Object.fromEntries(fields.map(({ name }) => [name, ""]))
+  );
+
+  const handleChange = (field, value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
   };
 
-  const isFormValid = name && email && phone && location && message;
+  const isFormValid = formData.user_name && formData.user_email && formData.user_phone && formData.message;
 
   const isValidEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -39,12 +43,12 @@ export const Form = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!isValidEmail(email)) {
+    if (!isValidEmail(formData.user_email)) {
       alert("Please enter a valid email address.");
       return;
     }
 
-    if (!isValidPhoneNumber(phone)) {
+    if (!isValidPhoneNumber(formData.user_phone)) {
       alert("Phone number should be a 10-digit number.");
       return;
     }
@@ -60,54 +64,35 @@ export const Form = () => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
-          resetForm();
+          console.log(formRef.current);
+          setFormData(
+            Object.fromEntries(fields.map(({ name }) => [name, ""]))
+          );
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
-  console.log(name, email, phone);
+
   return (
     <CommonWrapper>
       <CommonHeading>For enquiry:</CommonHeading>
       <FormControl>
         <FormWrapper ref={formRef}>
-          <StyledTextField
-            placeholder="Name*"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            InputLabelProps={{ shrink: true }}
-          />
-          <StyledTextField
-            placeholder="E-mail*"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            InputLabelProps={{ shrink: true }}
-          />
-          <StyledTextField
-            placeholder="Phone*"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            InputLabelProps={{ shrink: true }}
-          />
-          <StyledTextField
-            placeholder="Location*"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            InputLabelProps={{ shrink: true }}
-          />
-          <StyledTextField
-            placeholder="Message*"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            InputLabelProps={{ shrink: true }}
-            sx={{
-              "& .MuiInputBase-root": {
-                height: 115,
-              },
-            }}
-          />
+          {fields.map(({ label, type, name }) => (
+            <StyledTextField
+              key={name}
+              placeholder={label}
+              name={name}
+              value={formData[name]}
+              onChange={(e) => handleChange(name, e.target.value)}
+              required={true}
+              InputLabelProps={{ shrink: true }}
+              multiline={type === "textarea"}
+              rows={type === "textarea" ? 4 : undefined}
+            />
+          ))}
           <ButtonWrapper>
             <StyledButton
               onClick={sendEmail}
