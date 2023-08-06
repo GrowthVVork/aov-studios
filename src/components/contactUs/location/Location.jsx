@@ -33,7 +33,7 @@ export const Location = () => {
             <Marker position={center} />
           </GoogleMap>
         ) : (
-          <CircularProgress />
+          <CircularProgress color="inherit" />
         )}
       </MapWrapper>
       <CommonText style={{ fontWeight: "bold" }}>AOV Studios</CommonText>
