@@ -48,13 +48,12 @@ export const StyledButton = styled(Button)(() => ({
   backgroundColor: "rgb(239, 239, 239)",
   borderRadius: "4rem",
   color: "black",
-  cursor: "pointer",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "1.6rem",
   margin: "2.6rem 0 0 0",
   textTransform: "none",
   "&:hover": {
-    backgroundColor: "white",
+    backgroundColor: "#F5F5F5",
   },
 }));
 
