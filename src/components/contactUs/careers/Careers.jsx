@@ -1,3 +1,4 @@
+// Not being used currently.
 import * as React from "react";
 import { CommonHeading, CommonText, CommonWrapper } from "../../Shared.styles";
 
