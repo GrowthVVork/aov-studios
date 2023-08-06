@@ -1,4 +1,4 @@
-import { Link, Typography, styled } from "@mui/material";
+import { styled, Link } from "@mui/material";
 
 export const FooterContainer = styled("footer")(() => ({
   background: "rgb(239, 239, 239)",
@@ -7,69 +7,34 @@ export const FooterContainer = styled("footer")(() => ({
 
 export const FooterWrapper = styled("div")(() => ({
   display: "flex",
-  justifyContent: "space-between",
+  flexDirection: "column",
   margin: "0 auto",
+  textAlign: "center",
   width: "90%",
+}));
+
+export const TextWrapper = styled("div")(() => ({
+  display: "flex",
+  justifyContent: "center",
   "@media (max-width: 40rem)": {
     flexDirection: "column",
-    gap: "3rem",
   },
 }));
 
-export const FooterContentWrapper = styled("div")(() => ({
-  display: "flex",
-  flexDirection: "column",
-}));
-
-export const InfoHeader = styled("h3")(() => ({
-  font: '500 1rem/1.7 "Poppins", sans-serif',
-  fontSize: "1.7rem",
+export const GithubLink = styled(Link)(() => ({
+  color: "black",
+  font: '300 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "1.6rem",
   fontWeight: "bold",
-  letterSpacing: "0.02rem",
-  //marginBottom: "2.6rem",
-  //textTransform: "uppercase",
-  "@media (max-width: 40rem)": {
-    display: "flex",
-    justifyContent: "center",
-  },
-}));
-
-export const InfoContent = styled("ul")(() => ({
-  listStyleType: "none",
-  padding: 0,
-}));
-
-export const ServicesList = styled("li")(() => ({
-  color: "#767676",
-  display: "list-item",
-  font: '300 1rem/1.7 "Poppins", sans-serif',
-  fontSize: "1.6rem",
-  "@media (max-width: 40rem)": {
-    display: "flex",
-    justifyContent: "center",
-  },
-}));
-
-export const InfoText = styled(Typography)(() => ({
-  color: "#767676",
-  font: '300 1rem/1.7 "Poppins", sans-serif',
-  fontSize: "1.6rem",
-  "@media (max-width: 40rem)": {
-    display: "flex",
-    justifyContent: "center",
-  },
-}));
-
-export const InfoLink = styled(Link)(() => ({
-  color: "#767676",
-  font: '300 1rem/1.7 "Poppins", sans-serif',
-  fontSize: "1.6rem",
-  "@media (max-width: 40rem)": {
-    display: "flex",
-    justifyContent: "center",
-  },
   textDecoration: "none",
   ":hover": {
     textDecoration: "underline",
   },
+}));
+
+export const FooterText = styled("h3")(() => ({
+  font: '500 1rem/1.7 "Poppins", sans-serif',
+  fontSize: "1.7rem",
+  fontWeight: "bold",
+  letterSpacing: "0.02rem",
 }));
