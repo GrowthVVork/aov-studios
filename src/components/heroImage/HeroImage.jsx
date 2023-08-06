@@ -6,7 +6,7 @@ import { HeroImageWrapper, Image } from "./HeroImage.styles";
 export const HeroImage = () => {
   return (
     <HeroImageWrapper id="home">
-      <source srcset={hero} media="(min-width: 850px)" />
+      <source srcSet={hero} media="(min-width: 850px)" />
       <Image src={heroCropped} alt="" />
     </HeroImageWrapper>
   );

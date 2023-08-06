@@ -17,11 +17,11 @@ export const Portfolio = () => {
     image4,
     image5,
     image6,
-    image7
+    image7,
     // Add more image here if needed
   ];
   return (
-    <SectionContainer id="portfolio" style={{ paddingBottom: "3rem" }}>
+    <SectionContainer id="portfolio">
       <SectionHeading>Portfolio</SectionHeading>
       <ImagesContainer>
         {imageUrls.map((imageUrl, index) => (

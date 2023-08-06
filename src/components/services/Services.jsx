@@ -50,16 +50,16 @@ export const Services = () => {
           </div>
         </ServiceItemContent>
         <ServiceItemPicture>
-          <source srcset={service1_large} media="(min-width: 850px)" />
-          <source srcset={service1_medium} media="(min-width: 500px)" />
+          <source srcSet={service1_large} media="(min-width: 850px)" />
+          <source srcSet={service1_medium} media="(min-width: 500px)" />
           <ServiceItemImage src={service1_small} alt="" />
         </ServiceItemPicture>
       </ServiceItemContainer>
 
       <ServiceItemContainer reverse>
         <ServiceItemPicture>
-          <source srcset={service3_large} media="(min-width: 850px)" />
-          <source srcset={service3_medium} media="(min-width: 500px)" />
+          <source srcSet={service3_large} media="(min-width: 850px)" />
+          <source srcSet={service3_medium} media="(min-width: 500px)" />
           <ServiceItemImage src={service3_small} alt="" />
         </ServiceItemPicture>
         <ServiceItemContent>
@@ -103,8 +103,8 @@ export const Services = () => {
           </div>
         </ServiceItemContent>
         <ServiceItemPicture>
-          <source srcset={service2_large} media="(min-width: 850px)" />
-          <source srcset={service2_medium} media="(min-width: 500px)" />
+          <source srcSet={service2_large} media="(min-width: 850px)" />
+          <source srcSet={service2_medium} media="(min-width: 500px)" />
           <ServiceItemImage src={service2_small} alt="" />
         </ServiceItemPicture>
       </ServiceItemContainer>
