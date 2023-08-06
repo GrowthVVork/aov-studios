@@ -19,7 +19,7 @@ export const Footer = () => {
           </FooterText>
         </TextWrapper>
         <FooterText>
-          This website is maintained by -{" "}
+          This website is maintained by{" "}
           <GithubLink href="https://github.com/tejas-k3" target="_blank">
             Tejas
           </GithubLink>{" "}
