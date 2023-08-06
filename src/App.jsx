@@ -6,6 +6,7 @@ import {
   HeroImage,
   Portfolio,
   Services,
+  ContactForm
 } from "./components";
 
 const App = () => {
@@ -16,6 +17,8 @@ const App = () => {
       <AboutUs />
       <Services />
       <Portfolio />
+      {/* Uncomment below line to enable raw form */}
+      {/* <ContactForm /> */}
       <Footer />
     </>
   );
