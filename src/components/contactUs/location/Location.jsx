@@ -6,7 +6,7 @@ import { Email, MapWrapper } from "./Location.styles";
 
 export const Location = () => {
   const containerStyle = {
-    width: 400,
+    width: "100%",
     height: 300,
   };
 
@@ -28,7 +28,7 @@ export const Location = () => {
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={10}
+            zoom={12}
           >
             <Marker position={center} />
           </GoogleMap>

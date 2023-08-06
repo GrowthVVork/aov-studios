@@ -15,7 +15,6 @@ export const Email = styled(Link)(() => ({
   color: "black",
   font: '300 1rem/1.7 "Poppins", sans-serif',
   fontSize: "1.6rem",
-  paddingBottom: "1rem",
   textDecoration: "none",
   ":hover": {
     textDecoration: "underline",
