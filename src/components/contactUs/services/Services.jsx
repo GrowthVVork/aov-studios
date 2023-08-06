@@ -1,3 +1,4 @@
+// currently not being used.
 import * as React from "react";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import {
@@ -8,12 +9,7 @@ import {
 } from "./Services.styles";
 
 export const Services = () => {
-  const services = [
-    "Architecture",
-    "Interior",
-    "Landscape",
-    "Construction",
-  ];
+  const services = ["Architecture", "Interior", "Landscape", "Construction"];
 
   return (
     <ServicesWrapper>
