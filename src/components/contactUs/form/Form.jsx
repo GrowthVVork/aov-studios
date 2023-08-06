@@ -7,7 +7,6 @@ import {
   StyledButton,
   StyledTextField,
 } from "./Form.styles";
-import { FormControl } from "@mui/material";
 
 export const Form = () => {
   const formRef = React.useRef();
@@ -30,10 +29,14 @@ export const Form = () => {
     }));
   };
 
-  const isFormValid = formData.user_name && formData.user_email && formData.user_phone && formData.message;
+  const isFormValid =
+    formData.user_name &&
+    formData.user_email &&
+    formData.user_phone &&
+    formData.message;
 
   const isValidEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+\.com$/.test(email);
   };
 
   const isValidPhoneNumber = (phone) => {
@@ -65,9 +68,7 @@ export const Form = () => {
           console.log(result.text);
           console.log("message sent");
           console.log(formRef.current);
-          setFormData(
-            Object.fromEntries(fields.map(({ name }) => [name, ""]))
-          );
+          setFormData(Object.fromEntries(fields.map(({ name }) => [name, ""])));
         },
         (error) => {
           console.log(error.text);
@@ -78,32 +79,30 @@ export const Form = () => {
   return (
     <CommonWrapper>
       <CommonHeading>For enquiry:</CommonHeading>
-      <FormControl>
-        <FormWrapper ref={formRef}>
-          {fields.map(({ label, type, name }) => (
-            <StyledTextField
-              key={name}
-              placeholder={label}
-              name={name}
-              value={formData[name]}
-              onChange={(e) => handleChange(name, e.target.value)}
-              required={true}
-              InputLabelProps={{ shrink: true }}
-              multiline={type === "textarea"}
-              rows={type === "textarea" ? 4 : undefined}
-            />
-          ))}
-          <ButtonWrapper>
-            <StyledButton
-              onClick={sendEmail}
-              variant="contained"
-              disabled={!isFormValid}
-            >
-              Submit
-            </StyledButton>
-          </ButtonWrapper>
-        </FormWrapper>
-      </FormControl>
+      <FormWrapper ref={formRef}>
+        {fields.map(({ label, type, name }) => (
+          <StyledTextField
+            key={name}
+            placeholder={label}
+            name={name}
+            value={formData[name]}
+            onChange={(e) => handleChange(name, e.target.value)}
+            required
+            InputLabelProps={{ shrink: true }}
+            multiline={type === "textarea"}
+            rows={type === "textarea" ? 6.5 : undefined}
+          />
+        ))}
+        <ButtonWrapper>
+          <StyledButton
+            onClick={sendEmail}
+            variant="contained"
+            disabled={!isFormValid}
+          >
+            Submit
+          </StyledButton>
+        </ButtonWrapper>
+      </FormWrapper>
     </CommonWrapper>
   );
 };
