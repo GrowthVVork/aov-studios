@@ -2,7 +2,10 @@ import { styled, Link } from "@mui/material";
 
 export const FooterContainer = styled("footer")(() => ({
   background: "rgb(239, 239, 239)",
-  padding: "4rem 0",
+  padding: "3rem 0",
+  "@media (max-width: 40rem)": {
+    padding: "2rem 0",
+  },
 }));
 
 export const FooterWrapper = styled("div")(() => ({
