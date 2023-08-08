@@ -8,6 +8,9 @@ export const ServiceItemContainer = styled("div")(({ reverse }) => ({
   gridTemplateColumns: "1fr 1fr",
   "&:not(:last-child)": {
     paddingBottom: "8rem",
+    "@media (max-width: 53rem)": {
+      paddingBottom: "6.5rem",
+    },
   },
   "@media (max-width: 71rem)": {
     flexDirection: "column",

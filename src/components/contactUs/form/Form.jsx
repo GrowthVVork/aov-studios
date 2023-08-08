@@ -90,7 +90,7 @@ export const Form = () => {
             required
             InputLabelProps={{ shrink: true }}
             multiline={type === "textarea"}
-            rows={type === "textarea" ? 6.5 : undefined}
+            rows={type === "textarea" ? 7.5 : undefined}
           />
         ))}
         <ButtonWrapper>

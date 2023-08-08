@@ -8,6 +8,7 @@ export const AboutUsContent = styled("div")(() => ({
   },
   "@media (max-width: 53rem)": {
     paddingLeft: "6%",
+    paddingBottom: "4.8rem",
   },
 }));
 
