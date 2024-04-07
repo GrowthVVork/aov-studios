@@ -38,7 +38,7 @@ export const Location = () => {
           <CircularProgress color="inherit" />
         )} */}
         <a
-          href="https://www.google.com/maps/search/Ram%20Bagh/@22.73183250427246,75.85869598388672,17z?hl=en"
+          href="https://www.google.com/maps/place/Kila+Maidan+Rd,+Kamala+Nehru+Nagar,+Indore,+Madhya+Pradesh"
           target="_blank"
           rel="noreferrer"
         >
@@ -47,7 +47,7 @@ export const Location = () => {
         </a>
       </MapWrapper>
       <CommonText style={{ fontWeight: "bold" }}>AOV Studios</CommonText>
-      <CommonText>Narayan Bagh, Indore (452007)</CommonText>
+      <CommonText>Kila Maidan Road, Indore (452006)</CommonText>
       <CommonText style={{ paddingBottom: "1rem" }}>MP, IN</CommonText>
       <CommonText>+91-7582898292</CommonText>
       <Email href="mailto:studiosaov@gmail.com">studiosaov@gmail.com</Email>
