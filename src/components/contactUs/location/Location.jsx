@@ -38,13 +38,16 @@ export const Location = () => {
           <CircularProgress color="inherit" />
         )} */}
         <a
-          href="https://maps.app.goo.gl/RSyoLcCh5SjBhYBb7"
-          target="_blank"
-          rel="noreferrer"
+        href="https://maps.app.goo.gl/RSyoLcCh5SjBhYBb7"
+        target="_blank"
+        rel="noreferrer"
         >
-          <source srcSet={mapLarge} media="(min-width: 53rem)" />
-          <img width="100%" src={mapSmall} alt="" />
-        </a>
+          <picture>
+            <source srcSet={mapLarge} media="(min-width: 53rem)" />
+            <img width="100%" src={mapSmall} alt="Office Location Map" />
+            </picture>
+            </a>
+
       </MapWrapper>
       <CommonText style={{ fontWeight: "bold" }}>AOV Studios</CommonText>
       <CommonText>Sangam Nagar, Indore (452006)</CommonText>
